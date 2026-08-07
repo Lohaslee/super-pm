@@ -1,0 +1,4 @@
+interface:
+  display_name: "Super PM"
+  short_description: "融合六位产品思想，从负向需求澄清到五层产品设计与PRD输出"
+  default_prompt: "使用 $super-pm 从不做什么开始澄清我的产品想法，并逐层产出可执行 PRD。"
