@@ -2,6 +2,8 @@
 
 Use public material to create traceable decision tools, not a personality imitation.
 
+Keep source entries in [source-registry.md](source-registry.md), not in the thinker principle files. Thinker files contain only decision-ready principles and no links or source metadata. Load the registry only when maintaining principles, when the user requests evidence, or when attribution materially affects a conclusion.
+
 ## Source Tiers
 
 - **Tier 1**: the person's own speech, interview, article, letter, course, book, or official company publication/video.
@@ -14,7 +16,6 @@ Prefer Tier 1. Keep the publication date and situation because a person's view m
 
 For each principle, include:
 
-- `Source basis`: one or more declared source IDs.
 - `Distilled principle`: a concise, actionable synthesis.
 - `Use when`: the decisions it can inform.
 - `Ask`: diagnostic questions that reveal the relevant facts.
@@ -37,5 +38,7 @@ For each principle, include:
 ```markdown
 - [XX-S01] [Tier 1] Title (publisher, date, type) - https://example.com
 ```
+
+Keep source IDs and links out of thinker principle cards. Resolve attribution against the centralized registry only during maintenance or an explicitly requested evidence review.
 
 Run `python3 scripts/validate_sources.py` after edits.

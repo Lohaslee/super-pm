@@ -16,38 +16,51 @@ Product lenses are intentionally incompatible in places. Preserve the disagreeme
 
 ### Focus vs completeness
 
-- Jobs may favor removing features to protect coherence.
-- Li Xiang may favor a complete product definition for the target segment.
+- 乔老师 may favor removing features to protect coherence.
+- 李老师 may favor a complete product definition for the target segment.
 - Resolve by separating a coherent end-to-end promise from broad feature coverage. Keep everything needed for the promise; remove the rest.
 
 ### Restraint vs growth
 
-- Zhang Xiaolong may resist interruption, manipulation, and social pressure.
+- 张老师 may resist interruption, manipulation, and social pressure.
 - Commercial objectives may favor more prompts and engagement loops.
 - Resolve with user-value and guardrail metrics. Reject growth that depends on regret, accidental action, or trust erosion.
 
 ### Emotional intensity vs utility
 
-- Liang Ning may expose a strong emotional opportunity.
-- Zhang Xiaolong may favor a quiet tool that disappears after use.
+- 梁老师 may expose a strong emotional opportunity.
+- 张老师 may favor a quiet tool that disappears after use.
 - Resolve according to the user's situation: emotional energy may drive adoption, while interaction should still minimize unnecessary burden.
 
 ### User value vs stakeholder value
 
-- Yu Jun's transaction view surfaces all participants and incentives.
+- 俞老师's transaction view surfaces all participants and incentives.
 - A single-user narrative can hide costs imposed on another party.
 - Resolve by modeling who creates, receives, and pays for value; do not optimize one party by making the system unstable.
 
 ### Breakthrough vs feasibility
 
-- Wang Shimu may push for a differentiated product mechanism.
+- 王老师 may push for a differentiated product mechanism.
 - Delivery constraints may favor an incremental release.
 - Resolve by testing the distinctive hypothesis with the smallest credible mechanism, not by removing the differentiation itself.
+
+### Lead coherence vs specialist challenge
+
+- A user-selected Lead PM should preserve one coherent product direction across decisions.
+- A supporting lens may reveal stronger evidence, a specialist constraint, or a user-boundary violation.
+- Resolve with the normal hierarchy rather than letting the Lead PM win by status. If supporting advice wins, keep the Lead PM responsible for integrating the revised decision and record the departure from its original recommendation.
+
+### Speed and reputation vs validation stage
+
+- 雷老师 may push for focus, faster learning loops, visible quality, and word of mouth.
+- 李老师 or 俞老师 may show that the core mechanism or value difference is not yet proven.
+- Resolve by accelerating the smallest credible 0-to-1 test, not the full 1-to-10 rollout. Protect safety, core quality, and explicit reversal thresholds.
 
 ## Decision Record
 
 ```text
 Conflict:
+Lead PM when selected:
 Option A / supporting principles:
 Option B / supporting principles:
 Evidence and constraints:

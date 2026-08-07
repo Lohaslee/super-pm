@@ -12,6 +12,14 @@ When writing in Chinese, use `战略层、范围层、结构层、框架层、�
 
 A lower-plane decision may reveal a higher-plane defect. When that happens, return to the earliest inconsistent plane, revise it, and propagate the change downward.
 
+## Decision Constraint Chain
+
+Carry each accepted user boundary and product decision downstream rather than restating it as a vague design adjective:
+
+`User statement or evidence -> Negative Boundary -> strategy decision -> scope rule -> structure behavior -> framework constraint -> surface behavior -> acceptance check`
+
+Assign stable decision IDs when the chain is long enough to lose traceability. Do not let a downstream implementation invent a missing upstream rule; record it as an unresolved decision.
+
 ## Preflight: Negative Boundary
 
 Clarify:
@@ -125,8 +133,11 @@ For every plane, record:
 ```text
 Decision:
 Evidence:
-Selected lenses and principle IDs:
+Lens proposals and principle IDs:
+Conflict and resolution:
 Rejected alternative and reason:
 Assumptions:
+Upstream constraints:
+Downstream implications:
 Exit check:
 ```

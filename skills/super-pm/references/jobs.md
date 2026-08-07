@@ -1,20 +1,11 @@
-# Steve Jobs Lens
+# 乔老师 Lens
 
-Use this lens for focus, end-to-end coherence, product quality, simplicity, and product narrative. These cards synthesize public material; they are not quotations or a simulation of Steve Jobs.
-
-## Sources
-
-- [SJ-S01] [Tier 1] Steve Jobs: Make Something Wonderful (Steve Jobs Archive, 2023, curated speeches/interviews/emails) - https://book.stevejobsarchive.com/
-- [SJ-S02] [Tier 1] Objects of Our Life (Steve Jobs Archive, 1983 talk published online, speech) - https://stevejobsarchive.com/stories/objects-of-our-life
-- [SJ-S03] [Tier 1] Steve Jobs at the D: All Things Digital Conference (Apple, 2003-2010, interview collection) - http://itstreaming.apple.com/podcasts/atd/jobsatd.pdf
-- [SJ-S04] [Tier 1] You've got to find what you love (Stanford, 2005, prepared commencement address) - https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says
-- [SJ-S05] [Tier 2] The Next Insanely Great Thing (Wired, 1996, direct interview) - https://www.wired.com/1996/02/jobs-2/
+Use this lens for focus, end-to-end coherence, product quality, simplicity, and product narrative. It is a method lens under an alias, not a simulation or endorsement by a real person.
 
 ## Distilled Principles
 
 ### SJ-P01 Focus means meaningful refusal
 
-- Source basis: SJ-S01, SJ-S03
 - Distilled principle: Concentration is created by rejecting good ideas that dilute the few outcomes the product must deliver exceptionally well.
 - Use when: Scope is expanding or teams are protecting pet features.
 - Ask: Which one or two experiences deserve disproportionate quality, and what will we stop doing to fund them?
@@ -24,7 +15,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P02 Start from the experience and work backward
 
-- Source basis: SJ-S01, SJ-S03
 - Distilled principle: Define the valuable user experience before selecting technology or exposing technical capabilities.
 - Use when: A project begins with a model, platform, API, or engineering novelty.
 - Ask: What becomes meaningfully better for the user if the technology disappears from the pitch?
@@ -34,7 +24,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P03 Own the whole experience
 
-- Source basis: SJ-S01, SJ-S03, SJ-S05
 - Distilled principle: Optimize the complete journey across components, handoffs, setup, use, support, and recovery rather than maximizing isolated parts.
 - Use when: Multiple teams or partners own different moments of one user journey.
 - Ask: Where does the user's experience break even though every local team met its metric?
@@ -44,7 +33,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P04 Simplicity is resolved complexity
 
-- Source basis: SJ-S01, SJ-S02
 - Distilled principle: A simple surface should result from understanding and resolving underlying complexity, not merely hiding options.
 - Use when: A team proposes minimal UI without resolving rules, states, or exceptions.
 - Ask: Which complexity has been eliminated, and which complexity has only been moved onto the user?
@@ -54,7 +42,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P05 Product quality includes invisible details
 
-- Source basis: SJ-S01, SJ-S02
 - Distilled principle: Internal consistency, edge cases, setup, transitions, and unseen construction influence trust and long-term quality.
 - Use when: A shortcut is invisible in the happy path but degrades maintainability or recovery.
 - Ask: Which invisible compromise will users eventually feel through inconsistency, delay, or failure?
@@ -64,7 +51,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P06 Build products worthy of a relationship
 
-- Source basis: SJ-S02
 - Distilled principle: Important products become recurring objects in people's lives and should earn familiarity, trust, and emotional durability.
 - Use when: Defining product character, industrial design, or a frequently used interface.
 - Ask: What relationship will repeated use create, and which product behaviors would betray it?
@@ -74,7 +60,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P07 Taste is disciplined editing
 
-- Source basis: SJ-S01, SJ-S03
 - Distilled principle: Product judgment requires comparing alternatives against a clear standard and repeatedly editing toward coherence.
 - Use when: Research cannot choose between several viable expressions of the same strategy.
 - Ask: Which option best expresses the product promise with the fewest conflicting signals?
@@ -84,7 +69,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P08 Demonstrate the value as a story
 
-- Source basis: SJ-S01, SJ-S03
 - Distilled principle: A product definition should be understandable through a concrete before-and-after user story, not a list of technologies and features.
 - Use when: The team cannot explain why the product matters or launches with a feature inventory.
 - Ask: What can the user now do, feel, or avoid that was previously difficult or impossible?
@@ -94,7 +78,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P09 Prefer small excellent teams with clear ownership
 
-- Source basis: SJ-S01, SJ-S03
 - Distilled principle: A compact group of strong contributors with direct accountability can preserve product coherence better than coordination-heavy structures.
 - Use when: Ownership is fragmented or meetings replace decisions.
 - Ask: Who owns the integrated result, and which participants are essential to make the next decision?
@@ -104,7 +87,6 @@ Use this lens for focus, end-to-end coherence, product quality, simplicity, and 
 
 ### SJ-P10 Be willing to obsolete the current answer
 
-- Source basis: SJ-S01, SJ-S03, SJ-S05
 - Distilled principle: Protect the user's future value rather than defending an existing product, channel, or revenue mechanism from a better solution.
 - Use when: A new approach threatens a successful incumbent product.
 - Ask: If a new entrant had no legacy to protect, what would it build for this user now?

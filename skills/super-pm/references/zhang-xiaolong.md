@@ -1,20 +1,11 @@
-# Zhang Xiaolong Lens
+# 张老师 Lens
 
-Use this lens for human motivation, social behavior, restrained interaction, attention, communication products, and tools that recede after use. These cards are traceable syntheses, not quotations or impersonation.
-
-## Sources
-
-- [ZX-S01] [Tier 2] 2016 WeChat Open Class: Zhang Xiaolong's first public speech, official unabridged edition (Woshipm, 2016, transcript) - https://www.woshipm.com/it/265492.html
-- [ZX-S02] [Tier 2] Zhang Xiaolong explains Mini Programs, full speech and video (Tencent Cloud Developer, 2017, transcript/video) - https://developer.cloud.tencent.com/article/1136014
-- [ZX-S03] [Tier 2] Zhang Xiaolong responds to everything, four-hour WeChat Open Class speech (Tencent News, 2019, transcript) - https://view.inews.qq.com/a/TEC2019011000005000
-- [ZX-S04] [Tier 1] 2019 WeChat Open Class: Zhang Xiaolong full speech review (Tencent Video, 2019, event video) - https://origin-m.v.qq.com/x/cover_seo/b86kk0n60chvn5j/b0029zsv8t9.html
-- [ZX-S05] [Tier 2] Zhang Xiaolong speech transcript: ten years of product thinking at WeChat (Tencent News, 2021, transcript) - https://xw.qq.com/cmsid/TEC202101190138711A
+Use this lens for human motivation, social behavior, restrained interaction, attention, communication products, and tools that recede after use. It is a method lens under an alias, not an impersonation.
 
 ## Distilled Principles
 
 ### ZX-P01 A good tool helps the user leave
 
-- Source basis: ZX-S01, ZX-S02, ZX-S05
 - Distilled principle: Judge a tool by how efficiently it helps users complete real-world intent, not by how long it retains attention.
 - Use when: Engagement time is treated as the default success metric.
 - Ask: What does the user want to finish, and what is the shortest trustworthy path back to their life?
@@ -24,7 +15,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P02 Begin with human motivation, not feature demand
 
-- Source basis: ZX-S01, ZX-S03, ZX-S05
 - Distilled principle: A stated feature request often masks a deeper need involving identity, recognition, control, safety, curiosity, or connection.
 - Use when: Users request familiar features or a competitor copy.
 - Ask: What human tension would remain if this requested feature did not exist anywhere?
@@ -34,7 +24,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P03 Minimize unnecessary social pressure
 
-- Source basis: ZX-S03, ZX-S05
 - Distilled principle: Social features create obligations, comparison, performance, and interruption; design them as costs that require justification.
 - Use when: Adding feeds, rankings, read states, public metrics, invitations, or notifications.
 - Ask: What obligation or anxiety does this signal create for sender, receiver, and observer?
@@ -44,7 +33,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P04 Let interaction follow an existing intuition
 
-- Source basis: ZX-S01, ZX-S02
 - Distilled principle: Prefer interactions that match users' existing mental models and situational intent over novel mechanics requiring explanation.
 - Use when: Designing navigation, gestures, onboarding, or cross-channel entry.
 - Ask: What would the user naturally try before being taught?
@@ -54,7 +42,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P05 Use context as the entry point
 
-- Source basis: ZX-S02, ZX-S05
 - Distilled principle: A service becomes lighter when it appears in the physical or digital context where the need arises instead of demanding installation, search, and repeated setup.
 - Use when: Designing Mini Program-like services, QR entry, links, integrations, or embedded workflows.
 - Ask: Where does the need occur, and what is the most direct trustworthy entry from that moment?
@@ -64,7 +51,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P06 Product rules express values
 
-- Source basis: ZX-S01, ZX-S03, ZX-S05
 - Distilled principle: Ranking, messaging, identity, and platform rules inevitably favor certain behaviors; make those value choices explicit.
 - Use when: Designing feeds, ecosystems, moderation, incentives, or growth mechanics.
 - Ask: Which behavior does this rule reward at scale, and would we accept the resulting culture?
@@ -74,7 +60,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P07 Decentralize creation while centralizing fair rules
 
-- Source basis: ZX-S01, ZX-S02, ZX-S05
 - Distilled principle: Platforms should enable participants to create value without the platform micromanaging every outcome, while maintaining clear and stable boundaries.
 - Use when: Building ecosystems, creator tools, marketplaces, or extension platforms.
 - Ask: What can participants decide themselves, and which shared rule is necessary for trust?
@@ -84,7 +69,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P08 Protect attention as a user resource
 
-- Source basis: ZX-S03, ZX-S05
 - Distilled principle: Notifications, badges, feeds, and prompts spend the user's finite attention and must earn that cost.
 - Use when: Adding reminders, campaigns, red dots, recommendations, or re-engagement loops.
 - Ask: Is this interruption important to the user at this moment, or only valuable to the sender?
@@ -94,7 +78,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P09 Identity expression is a product function
 
-- Source basis: ZX-S03, ZX-S05
 - Distilled principle: In social products, users manage how different people perceive them; publishing and visibility controls must support that reality.
 - Use when: Designing profiles, posts, status, sharing, privacy, or audience selection.
 - Ask: Who is the user performing for, and which audiences or contexts should remain separate?
@@ -104,7 +87,6 @@ Use this lens for human motivation, social behavior, restrained interaction, att
 
 ### ZX-P10 Resist metric-driven product deformation
 
-- Source basis: ZX-S01, ZX-S03, ZX-S05
 - Distilled principle: A local metric can push a product away from its purpose by rewarding interruption, low-quality information, or compelled behavior.
 - Use when: Growth targets conflict with trust, information quality, or task completion.
 - Ask: If this metric doubles, what unwanted behavior will also increase?
