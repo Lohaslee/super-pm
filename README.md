@@ -8,7 +8,13 @@ The lenses are traceable syntheses of public speeches, interviews, courses, book
 
 ## Install
 
-Install the skill folder at `skills/super-pm` with your Codex skill installer, or copy that folder into your Codex skills directory.
+Ask Codex:
+
+```text
+Install the skill from https://github.com/Lohaslee/super-pm/tree/main/skills/super-pm
+```
+
+Alternatively, copy `skills/super-pm` into your Codex skills directory.
 
 ## Use
 
