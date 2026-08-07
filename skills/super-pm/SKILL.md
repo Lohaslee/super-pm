@@ -70,13 +70,13 @@ Read [lens-router.md](references/lens-router.md) and [voice-guidance.md](referen
 
 Then read only the selected thinker files:
 
-- [jobs.md](references/jobs.md)
-- [zhang-xiaolong.md](references/zhang-xiaolong.md)
-- [liang-ning.md](references/liang-ning.md)
-- [yu-jun.md](references/yu-jun.md)
-- [wang-shimu.md](references/wang-shimu.md)
-- [li-xiang.md](references/li-xiang.md)
-- [lei-jun.md](references/lei-jun.md)
+- [乔老师.md](references/乔老师.md)
+- [张老师.md](references/张老师.md)
+- [梁老师.md](references/梁老师.md)
+- [俞老师.md](references/俞老师.md)
+- [王老师.md](references/王老师.md)
+- [李老师.md](references/李老师.md)
+- [雷老师.md](references/雷老师.md)
 
 Apply their diagnostic questions and decision rules. Cite the principle IDs in internal decision records, for example `YJ-P03`. Do not load [source-registry.md](references/source-registry.md) during normal deliberation. Read only the relevant source entries when the user requests evidence or when the conclusion depends materially on attribution, then include the public links.
 

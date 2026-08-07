@@ -9,13 +9,13 @@ from pathlib import Path
 
 
 THINKER_FILES = {
-    "jobs.md": ("SJ", "乔老师"),
-    "zhang-xiaolong.md": ("ZX", "张老师"),
-    "liang-ning.md": ("LN", "梁老师"),
-    "yu-jun.md": ("YJ", "俞老师"),
-    "wang-shimu.md": ("WS", "王老师"),
-    "li-xiang.md": ("LX", "李老师"),
-    "lei-jun.md": ("LJ", "雷老师"),
+    "乔老师.md": ("SJ", "乔老师"),
+    "张老师.md": ("ZX", "张老师"),
+    "梁老师.md": ("LN", "梁老师"),
+    "俞老师.md": ("YJ", "俞老师"),
+    "王老师.md": ("WS", "王老师"),
+    "李老师.md": ("LX", "李老师"),
+    "雷老师.md": ("LJ", "雷老师"),
 }
 PRINCIPLE_RE = re.compile(r"^### (?P<id>[A-Z]{2}-P\d{2})\b", re.MULTILINE)
 URL_RE = re.compile(r"https?://|www\.", re.IGNORECASE)

@@ -1,38 +1,69 @@
 # Super PM
 
-`super-pm` is a reusable Codex skill for turning unclear product ideas into defensible product decisions and executable PRDs.
+`super-pm` 是一个帮助你分析需求、梳理产品并做出可靠产品决策的 Codex Skill，尤其适合独立开发者验证 0→1 想法，也适合已有产品的诊断、功能取舍和体验重构。
 
-It starts by asking what must not be built and what qualities must be protected. It then dynamically selects seven distilled product lenses presented under the aliases 乔老师、张老师、梁老师、俞老师、王老师、李老师、雷老师. They independently reframe the problem, propose designs, challenge the current direction, and expose tradeoffs before working through strategy, scope, structure, skeleton, and surface.
+**它不是一个替你写文档、维护流程或堆砌产品术语的工具。** PRD、报告和决策记录只是产品思考的载体，不是目的。它真正关心的是：用户为什么需要这个产品、哪些需求值得解决、核心机制是否成立、什么必须舍弃，以及怎样把一个想法逐步打磨成可验证、可交付的产品。
 
-The lenses are active product-advisory perspectives, not decorative labels. Their disagreements remain visible and their accepted advice is translated into downstream design and implementation constraints. They are method-oriented syntheses, not personality simulations, and do not imply endorsement by any real person. Dialogue may occasionally borrow a lens's question shape or a short verified phrase, but never impersonates the person.
+## 它如何帮助你打造产品
 
-Users may optionally appoint one lens as the Lead PM for a project. The Lead PM owns the coherent product direction while other lenses provide specialist proposals and independent challenges; evidence and the user's negative boundaries still outrank role status.
+1. **先问不要什么**：明确不可接受的结果、暂时不做的功能、硬约束和必须保护的产品品质。
+2. **拆开事实与假设**：区分用户原话、已知事实、推断、产品判断和待验证假设，避免把假设包装成事实。
+3. **组织真正有分歧的产品视角**：按当前问题动态选择两到四位老师参与，不为了凑齐角色强行制造复杂性。
+4. **允许指定主 PM**：你可以让一位老师作为 Lead PM 负责整体方向，其他老师提供专业补充和独立挑战；最终仍以用户边界和可信证据为准。
+5. **把决策贯穿到产品细节**：依次处理战略层、范围层、结构层、框架层和表现层，让界面与功能能够追溯到上游产品判断。
+6. **优先验证最危险的假设**：先设计最低成本的验证，再决定是否搜索资料、查看竞品或运行原型，不用文档掩盖不确定性。
 
-## Install
+你可以在讨论中的任何时刻要求它输出报告或 PRD。信息不足时，它会明确标注假设、缺口和待决策项，而不是擅自补全；当产品方向已经收敛时，PRD 可以直接交给 AI coding agent 或开发团队执行。
 
-Ask Codex:
+## 七个产品视角
+
+| 视角 | 主要关注 |
+|---|---|
+| 乔老师 | 聚焦、取舍、完整体验、产品品质与叙事 |
+| 张老师 | 人性、克制、自然交互、注意力与社交压力 |
+| 梁老师 | 用户状态、情绪驱动力、真需求、系统能力与机会判断 |
+| 俞老师 | 用户价值、替换成本、交易结构、优先级与假设验证 |
+| 王老师 | 本质思考、一手用户洞察、突破机制、内容与推荐产品 |
+| 李老师 | 产品定义、核心体验完整性、商业闭环、组织与规模化 |
+| 雷老师 | 时机、专注执行、性价比、口碑、用户参与与复盘 |
+
+这些视角不是装饰性标签。被选中的老师必须重新定义问题、给出具体方案、指出拒绝什么，并说明哪项证据会改变判断。不同意见会被保留下来，再根据用户边界、证据、用户价值、交付约束和可逆性做出取舍。
+
+## 使用方式
+
+安装时可以对 Codex 说：
 
 ```text
 Install the skill from https://github.com/Lohaslee/super-pm/tree/main/skills/super-pm
 ```
 
-Alternatively, copy `skills/super-pm` into your Codex skills directory.
-
-## Use
+使用示例：
 
 ```text
-Use $super-pm to clarify this product idea from what we should not build, then produce a PRD.
+使用 $super-pm 帮我分析这个产品想法。先问清楚我不想做成什么，不要急着写 PRD。
 ```
 
-The skill supports full product definition, product diagnosis, single-plane work, decision reviews, and on-demand reports or PRDs at any point in the discussion. Early artifacts are explicitly labeled as snapshots or drafts, with assumptions and missing decisions kept visible.
+```text
+使用 $super-pm，让雷老师担任主 PM，其他视角配合，帮我验证这个 0→1 想法。
+```
 
-## Validate
+```text
+使用 $super-pm，把我们目前确认的产品决策整理成一份可直接进入开发的 PRD。
+```
+
+## 致谢与说明
+
+感谢乔老师、张老师、梁老师、俞老师、王老师、李老师和雷老师公开分享的产品经验与思考，为产品从业者提供了长期而重要的启发。
+
+本 Skill 的参考资料来自公开互联网，包括公开演讲、访谈、课程、文章和著作信息。项目只提炼其中与产品决策有关的核心方法，不收录长篇原文，不模拟任何真实人物，也不代表任何老师对本项目或具体产品的认可与背书。相关思想、引文及原始内容的权利归各自作者和权利人所有。
+
+## 校验
 
 ```bash
 python3 skills/super-pm/scripts/validate_sources.py
 python3 /path/to/skill-creator/scripts/quick_validate.py skills/super-pm
 ```
 
-## License
+## 许可证
 
-MIT. Public source links and attributed ideas remain subject to their respective owners' terms.
+项目代码采用 MIT License。公开资料及相关思想内容仍受其各自权利条款约束。
