@@ -1,6 +1,19 @@
 # Adaptive PRD Template
 
-Use this only when the user requests a PRD or the product is ready for implementation or delivery handoff. A PRD is a carrier for product decisions, not proof that the product has been understood.
+Choose the smallest artifact that supports the next decision. Use the one-page brief for solo work, early alignment, or a compact decision handoff. Use the full PRD only when the user requests it or the product is ready for implementation or delivery handoff. A PRD is a carrier for product decisions, not proof that the product has been understood.
+
+## One-Page Decision Brief
+
+Do not label this brief `Implementation-ready`. Keep it to one page where practical:
+
+1. **Decision**: the decision question, direct recommendation, and maturity.
+2. **User value**: primary user, situation, unmet need, current alternative, and decisive product promise.
+3. **Negative Boundary**: `must not`, `not now`, hard constraints, and protected qualities.
+4. **Scope**: `must`, `later`, and `not doing`.
+5. **Evidence**: known facts, highest-impact assumption, strongest objection, and what would reverse the decision.
+6. **Next validation**: cheapest method, sample, threshold, owner, and next action.
+
+Use the remaining sections only for the full PRD.
 
 Keep the core short. Add only the product-type modules that affect delivery. Do not fill sections for completeness; write `Not applicable` or `Pending` with a reason.
 

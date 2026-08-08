@@ -43,6 +43,24 @@ FORBIDDEN_NAMES = (
 )
 
 
+def normalized_principle(value: str) -> str:
+    """Normalize formatting-only differences without judging semantic similarity."""
+    return re.sub(r"[\W_]+", "", value.casefold())
+
+
+def duplicate_principles(text: str, field: str) -> list[str]:
+    values = re.findall(rf"^- {re.escape(field)}\s*(.+?)\s*$", text, re.MULTILINE)
+    seen: dict[str, str] = {}
+    duplicates: list[str] = []
+    for value in values:
+        normalized = normalized_principle(value)
+        if normalized in seen:
+            duplicates.append(value)
+        else:
+            seen[normalized] = value
+    return duplicates
+
+
 def validate_file(path: Path, prefix: str, alias: str) -> list[str]:
     text = path.read_text(encoding="utf-8")
     errors: list[str] = []
@@ -93,6 +111,13 @@ def validate_file(path: Path, prefix: str, alias: str) -> list[str]:
         errors.append(
             f"{path.name}: invalid confidence values: "
             f"{', '.join(invalid_confidence)}"
+        )
+
+    repeated_principles = duplicate_principles(text, "Distilled principle:")
+    if repeated_principles:
+        errors.append(
+            f"{path.name}: duplicate distilled principles found: "
+            f"{'; '.join(repeated_principles)}"
         )
 
     if URL_RE.search(text):
@@ -154,6 +179,13 @@ def validate_zh_file(path: Path, prefix: str, alias: str) -> list[str]:
         errors.append(
             f"zh-CN/{path.name}: invalid confidence values: "
             f"{', '.join(invalid_confidence)}"
+        )
+
+    repeated_principles = duplicate_principles(text, "提炼原则：")
+    if repeated_principles:
+        errors.append(
+            f"zh-CN/{path.name}: duplicate distilled principles found: "
+            f"{'; '.join(repeated_principles)}"
         )
 
     if "不是英文卡片" not in text:
@@ -222,6 +254,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "references/zh-CN/",
             "Focused shaping",
             "Default Decision Loop",
+            "If one pass can answer the user's question, answer it now",
+            ".super-pm/decisions.md",
             "Validation Record",
             "Primary Owner",
             "references/product-dimensions.md",
@@ -239,6 +273,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         ),
         "references/prd-template.md": (
             "Adaptive PRD Template",
+            "One-Page Decision Brief",
             "Optional Product-Type Modules",
             "Observed result",
             "Decision changed or retained",
@@ -265,6 +300,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         ),
         "references/zh-CN/prd-template.md": (
             "自适应 PRD 模板",
+            "一页决策简报",
             "按产品类型选用的模块",
             "实际结果",
             "保留或修改的决定",
@@ -273,6 +309,26 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "中文表达指引",
             "原文锚点",
             "不延伸、拼接或编造引语",
+        ),
+        "references/worked-example.md": (
+            "Worked Example",
+            "One Default Decision Loop",
+            "Why The Workflow Stops Here",
+        ),
+        "references/zh-CN/worked-example.md": (
+            "中文工作样例",
+            "一次默认决策循环",
+            "为什么不继续展开",
+        ),
+        "references/behavior-evals.md": (
+            "Behavior Evaluations",
+            "Existing Decision File Without Write Authorization",
+            "Lens Conflict",
+        ),
+        "references/zh-CN/behavior-evals.md": (
+            "中文行为评测",
+            "已有决策文件但未授权修改",
+            "视角冲突",
         ),
     }
 
