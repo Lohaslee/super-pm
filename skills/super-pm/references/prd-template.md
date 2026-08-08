@@ -1,28 +1,30 @@
-# PRD Template
+# Adaptive PRD Template
 
-Adapt depth to product complexity. Do not fill sections with generic prose; write `Not applicable` with a reason when necessary.
+Use this only when the user requests a PRD or the product is ready for implementation or delivery handoff. A PRD is a carrier for product decisions, not proof that the product has been understood.
 
-At the top of every PRD, state:
+Keep the core short. Add only the product-type modules that affect delivery. Do not fill sections for completeness; write `Not applicable` or `Pending` with a reason.
 
-- **Artifact maturity**: `Snapshot`, `Draft`, or `Implementation-ready`
-- **Coverage**: which discussion, evidence, repository state, and product planes are included
-- **Known gaps**: missing decisions or evidence that prevent the next maturity level
-- **Collaboration model**: `Dynamic council` or `Lead-PM collaboration`, including the Lead PM lens when selected
-- **Lens naming**: use aliases only in user-facing text
+At the top, state:
 
-When the user requests a PRD before discovery is complete, produce it immediately. Write `Pending` with a reason for unavailable sections instead of delaying output or inventing content.
+- **Artifact maturity**: `Snapshot`, `Draft`, or `Implementation-ready`.
+- **Coverage**: discussion, evidence, repository or product state, selected dimensions, and excluded dimensions.
+- **Known gaps**: decisions or evidence blocking the next maturity level.
+- **Collaboration model**: `Dynamic council` or `Lead-PM collaboration`, including the Lead PM when selected.
+- **Intended handoff**: AI coding agent, engineering team, design, operations, manufacturing, service delivery, or another owner.
 
-## 1. Product Decision Summary
+When requested before discovery is complete, produce the PRD immediately from confirmed information. Never convert missing information into confident prose.
 
-- One-sentence product definition
-- Primary user and situation
-- Current alternative
-- Product promise
-- Primary success metric
-- Recommended decision
-- Lead PM lens and integration responsibility when selected
+## Core 1. Product Decision Summary
 
-## 2. Negative Boundary
+- One-sentence product definition.
+- Primary user, customer, beneficiary, buyer, or operator and situation.
+- Current alternative and switching barrier.
+- Product promise and decisive mechanism.
+- Primary success signal and guardrails.
+- Recommended decision and current maturity.
+- Lead PM and Primary Owner for the current decision when relevant.
+
+## Core 2. Negative Boundary
 
 ### Must not
 
@@ -32,112 +34,119 @@ When the user requests a PRD before discovery is complete, produce it immediatel
 
 ### Protected qualities
 
-For each item, state which downstream decisions and acceptance checks it constrains.
+For each item, state the product decision and acceptance check it constrains.
 
-## 3. Background And Evidence
+## Core 3. Evidence, Assumptions, And Validation
 
-- Problem evidence
-- User evidence
-- Business or organizational context
-- Repository and existing-product constraints
+| Statement | Type: fact, user statement, assumption, inference, or recommendation | Confidence | Validation status |
+|---|---|---|---|
 
-| Statement | Type: fact, user statement, assumption, inference, or recommendation | Source | Confidence | Validation status |
-|---|---|---|---|---|
+For each high-impact assumption, include:
 
-For high-impact assumptions, include the cheapest validation plan and whether the user authorized external research, competitor inspection, or prototype execution.
+| Hypothesis | Predicted behavior or outcome | Method and sample | Decision threshold | Observed result | Interpretation | Decision changed or retained |
+|---|---|---|---|---|---|---|
 
-## 4. Strategy Plane
+Leave result fields `Pending` until evidence exists. Record whether the user authorized external research, competitor inspection, or prototype execution.
 
-- Primary and excluded users
-- User need and desired progress
-- Product objective
-- Value creation and exchange
-- Success and guardrail metrics
-- Strategic risks and validation plan
-- Selected lens proposals, conflicts, and decision
+## Core 4. Selected Product Dimensions
 
-## 5. Scope Plane
+Use [product-dimensions.md](product-dimensions.md). Include only dimensions that change the product:
 
-### Must ship
+- **需求与价值**: participants, situation, need, alternative, value exchange, objective.
+- **产品系统**: mechanism, system boundary, components, rules, economics, scope.
+- **使用与交付**: use, operating, ownership, fulfillment, support, and recovery lifecycle.
+- **触点与形态**: interface, device, physical form, service, channel, environment, or communication touchpoints.
+- **体验与信任**: product character, comprehension, feedback, quality signals, accessibility, safety, and trust.
 
-For each requirement: user need, behavior, business rule, acceptance boundary, and metric contribution.
+For every selected dimension, record the decision, supporting evidence, material alternative, rejected option, remaining assumption, and downstream constraint. Do not create separate lens monologues unless a disagreement remains decision-relevant.
+
+## Core 5. Scope And Acceptance
+
+### Must deliver
+
+For each item, state:
+
+- user or system need;
+- required behavior or outcome;
+- responsible component, actor, or touchpoint;
+- business or operating rule;
+- failure and recovery behavior where relevant;
+- acceptance boundary;
+- metric contribution.
 
 ### Later
 
 ### Not doing
 
-### Content and data requirements
+An AI coding agent or delivery team must not silently decide unresolved product questions.
 
-Include selected lens proposals, conflicts, and the reason each accepted or rejected recommendation changed scope.
+## Core 6. Decision Constraint Chain
 
-## 6. Structure Plane
-
-- Product objects and relationships
-- Primary user flow
-- Secondary flows
-- States and transitions
-- Empty, error, permission, interruption, and recovery paths
-- Information architecture
-- Selected lens proposals, conflicts, and decision
-
-## 7. Framework Plane (Skeleton)
-
-- Screen or surface inventory
-- Navigation model
-- Per-screen purpose, information priority, controls, and next action
-- Interaction annotations
-- Positive references, negative references, and rejected generic patterns when relevant
-- Selected lens proposals, conflicts, and decision
-
-## 8. Surface Plane
-
-- Product character
-- Visual and content hierarchy
-- Voice and terminology
-- Feedback behavior
-- Accessibility and sensory constraints
-- Positive references, negative references, and forbidden expressions of the product character
-- Selected lens proposals, conflicts, and decision
-
-## 9. Decision Constraint Chain
-
-| Upstream decision or boundary | Scope rule | Structure behavior | Framework or surface constraint | Implementation acceptance check |
+| Upstream need or boundary | Product mechanism or scope rule | Lifecycle or operating behavior | Touchpoint, form, experience, or trust constraint | Acceptance check |
 |---|---|---|---|---|
 
-Mark unresolved product questions explicitly. An AI coding agent must not silently choose an answer.
+## Core 7. Delivery, Measurement, And Open Decisions
 
-## 10. Measurement And Learning
+- Primary metric, leading indicators, and guardrails.
+- Events, observations, or operational data required.
+- Dependencies and technical, commercial, policy, supply, or organizational constraints.
+- Milestones appropriate to the product type.
+- Release, launch, rollout, production, service-readiness, or rollback approach.
+- Owners when known.
+- Stop conditions and escalation boundaries.
+- Open decisions, accepted risks, and revisit triggers.
 
-- Primary metric
-- Leading indicators
-- Guardrail metrics
-- Events or data required
-- Experiment or rollout plan
-- Review date and decision threshold
+## Optional Product-Type Modules
 
-## 11. Delivery
+Add only what materially affects delivery.
 
-- Dependencies
-- Technical or policy constraints
-- Milestones
-- Release and rollback approach
-- Owners when known
-- AI coding agent handoff instructions and stop conditions
+### Software And Interface
 
-## 12. Product-Lens Deliberation And Decision Log
+- Objects, relationships, states, permissions, and transitions.
+- Primary and secondary flows.
+- Screen or surface inventory, navigation, information priority, and controls.
+- Empty, loading, error, interruption, and recovery states.
+- Integration, migration, analytics, privacy, accessibility, and support requirements.
 
-For every major decision, preserve the independent advice before synthesis:
+### AI And Data
 
-| Decision question | Collaboration role | Lens and principle IDs | Reframe | Concrete proposal | Challenge or refusal | Evidence needed | Downstream change |
+- Model-enabled value and non-AI fallback.
+- Input, output, context, memory, and data-rights boundaries.
+- Quality evaluation, uncertainty expression, guardrails, and refusal behavior.
+- Human oversight, correction, audit, and incident handling.
+- Latency, cost, reliability, privacy, security, and model-change acceptance checks.
+
+### Hardware And Physical Product
+
+- Physical architecture, materials, dimensions, controls, environment, and ergonomics.
+- Safety, reliability, durability, certification, and quality thresholds.
+- Manufacturing, sourcing, assembly, testing, packaging, logistics, repair, and disposal.
+- Firmware, software, service, or accessory dependencies.
+
+### Service And Operations
+
+- Service blueprint: user actions, frontstage, backstage, systems, and evidence.
+- Roles, staffing, training, scripts, capacity, service levels, and handoffs.
+- Exceptions, escalation, compensation, recovery, and quality assurance.
+- Location, scheduling, channel, and operating-cost constraints.
+
+### Marketplace, Platform, Content, Or Community
+
+- Participant roles, value exchange, incentives, permissions, and governance.
+- Supply, demand, liquidity, cold start, quality, ranking, and discovery.
+- Creation, review, moderation, dispute, abuse, and appeal paths.
+- Ecosystem health and party-specific guardrail metrics.
+
+### Commercialization And Adoption
+
+- Packaging, pricing, margin, sales, channel, and unit economics.
+- Acquisition, onboarding, education, migration, and switching plan.
+- Launch promise, proof, reputation mechanism, retention, and expansion.
+- Commercial assumptions and thresholds that would change the plan.
+
+## Material Decision Log
+
+Include only decisions where alternatives or lens disagreements changed the outcome:
+
+| Decision question | Primary Owner | Direct recommendation | Challenger and named test | Evidence | Final decision | Rejected alternative | Revisit trigger |
 |---|---|---|---|---|---|---|---|
-
-Then record:
-
-- agreements and disagreements;
-- accepted recommendation and reason;
-- rejected recommendation and reason;
-- final decision and revisit trigger.
-
-## 13. Risks And Open Questions
-
-Separate unresolved questions, assumptions requiring validation, and accepted risks.

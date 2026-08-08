@@ -1,16 +1,17 @@
 # Source And Distillation Policy
 
-Use public material to create traceable decision tools, not a personality imitation.
+Use supplied or public material to create reusable decision tools, not a personality imitation.
 
-Keep source entries in [source-registry.md](source-registry.md), not in the thinker principle files. Thinker files contain only decision-ready principles and no links or source metadata. Load the registry only when maintaining principles, when the user requests evidence, or when attribution materially affects a conclusion.
+Keep research links, notes, source metadata, and real names out of the skill's Markdown files. Thinker files contain only decision-ready principles. Product work does not require a principle-to-source mapping. If a user requests evidence for a live product decision, ask before researching and report that evidence separately.
 
-## Source Tiers
+## Bilingual Lens Policy
 
-- **Tier 1**: the person's own speech, interview, article, letter, course, book, or official company publication/video.
-- **Tier 2**: a reputable publisher's complete transcript or direct interview.
-- **Tier 3**: commentary, notes, summaries, or reposts. Use only to locate stronger evidence or mark the resulting principle as tentative.
-
-Prefer Tier 1. Keep the publication date and situation because a person's view may change over time.
+- Keep the existing files in `references/` as the English lens set.
+- Keep independently distilled Chinese lens cards in `references/zh-CN/`; do not translate the English cards to produce or repair Chinese content.
+- For Chinese-language thinkers, preserve exact Chinese wording from the supplied Chinese materials when using an `原文锚点`.
+- For 乔老师, keep the English original when exact quotation matters. Treat Chinese wording as explanation rather than an original quotation unless an authoritative Chinese wording is supplied.
+- Principle IDs may align across languages for routing, but the wording and examples do not need literal parity. Maintain the decision intent in each language from its own materials.
+- Keep links, real names, and source metadata out of both language versions of the lens files.
 
 ## Distill A Principle
 
@@ -31,14 +32,8 @@ For each principle, include:
 4. Do not infer personal endorsement of a new product.
 5. Do not impersonate a living or deceased person.
 6. Preserve disagreements across dates or contexts instead of manufacturing consistency.
-7. Use Tier 3 material only with explicit low confidence when the original cannot be found.
+7. Mark uncertain or indirectly supported principles as tentative.
 
-## Source Entry Format
-
-```markdown
-- [XX-S01] [Tier 1] Title (publisher, date, type) - https://example.com
-```
-
-Keep source IDs and links out of thinker principle cards. Resolve attribution against the centralized registry only during maintenance or an explicitly requested evidence review.
+Keep source IDs and links out of thinker principle cards. A short original quotation may be used when its exact wording is available in the approved skill materials; do not invent or extend quotations.
 
 Run `python3 scripts/validate_sources.py` after edits.
