@@ -47,6 +47,17 @@ Use an accepted Negative Boundary when one exists. If it is missing, ask about o
 
 Expand beyond this loop only when the user requests it, the product is moving into implementation or delivery, multiple dimensions must coordinate, or the decision is expensive, irreversible, safety-sensitive, or regulated.
 
+## Route Work At The Product Boundary
+
+When a request is primarily execution or requires professional authority, make only the product decisions needed to unblock it, then use the relevant workflow, capability, or specialist. Do not convene product lenses when they cannot change a user, value, scope, lifecycle, or trust decision.
+
+- For pure engineering implementation, clarify the product objective, constraints, and acceptance boundary, then implement or hand off without continuing the product workflow.
+- For APIs and specifications, handle product-facing contracts, system boundaries, compatibility, permissions, and data rights; leave low-level design and code to engineering work.
+- For legal, regulatory, tax, accounting, audit, or investment questions, identify product impact and unresolved risks but do not present a product lens as professional advice or a definitive ruling.
+- For finance, keep business models, pricing, unit economics, and product guardrails in scope; route formal financial planning, valuation, accounting, and investment advice out.
+
+State the boundary briefly and continue with the in-scope work. Do not turn the boundary into a generic disclaimer or refuse work that can be completed with another available capability.
+
 ## Choose A Mode
 
 - **Focused shaping**: Default mode. Resolve the current product decision with the smallest useful reasoning loop.
@@ -159,13 +170,11 @@ Before execution, fill the hypothesis through decision threshold and ask permiss
 
 During context inspection, read `.super-pm/decisions.md` when it exists. Treat it as prior project context rather than unquestionable truth; surface conflicts, stale assumptions, and revisit triggers.
 
-Create or update `.super-pm/decisions.md` only when the user has asked to modify project files or explicitly asked to save the product decision. Never write it merely because the skill ran. Persist only confirmed items:
+When a confirmed decision is likely to matter beyond the current conversation, offer once at a natural stopping point to save it. Do not offer for tentative, trivial, or already-persisted decisions. An offer is not write authorization.
 
-- current objective and decision;
-- `must not`, `not now`, hard constraints, and protected qualities;
-- supporting evidence and unresolved high-impact assumptions;
-- rejected alternatives and reasons;
-- next validation, owner, and revisit trigger.
+Create or update `.super-pm/decisions.md` only when the user has asked to modify project files or explicitly asked to save the product decision. Never write it merely because the skill ran. When persistence is relevant, read [decision-memory.md](references/decision-memory.md) in English mode or [中文决策记忆](references/zh-CN/decision-memory.md) in Chinese mode and use its compact schema.
+
+When a confirmed decision reverses an earlier one, never silently overwrite history. Mark the earlier record `superseded`, link both records, and capture the evidence or constraint that caused the change. Update a current record in place only when new information does not change the decision itself.
 
 Do not store hidden reasoning, full council dialogue, or unconfirmed inference. When no writable project exists, offer the same fields as a portable Markdown decision snapshot.
 
@@ -228,4 +237,4 @@ Keep source links, research notes, source metadata, and real names out of the sk
 
 Maintain English thinker cards and Chinese thinker cards as two source-material-based sets, not as translations of each other. Preserve stable principle IDs when their decision intent aligns. Run the validator after any language or lens change.
 
-Before changing the workflow, review [behavior-evals.md](references/behavior-evals.md) and [中文行为评测](references/zh-CN/behavior-evals.md). Forward-test the affected cases when an independent evaluation surface is available. For a concise example of the intended rhythm, read [worked-example.md](references/worked-example.md) in English mode or [中文工作样例](references/zh-CN/worked-example.md) in Chinese mode.
+Before changing the workflow, review [behavior-evals.md](references/behavior-evals.md) and [中文行为评测](references/zh-CN/behavior-evals.md). Forward-test the affected cases when an independent evaluation surface is available. For concise software and offline-service examples, read [worked-example.md](references/worked-example.md) in English mode or [中文工作样例](references/zh-CN/worked-example.md) in Chinese mode.

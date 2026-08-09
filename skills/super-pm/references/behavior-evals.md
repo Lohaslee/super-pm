@@ -38,7 +38,7 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 
 **Input**: “Save the decision we just confirmed in the project.”
 
-**Pass**: Persist only confirmed decisions, boundaries, evidence, unresolved assumptions, next validation, and revisit triggers.
+**Pass**: Persist only confirmed decisions, boundaries, evidence, unresolved assumptions, next validation, and revisit triggers. If the decision reverses an earlier one, preserve and link the superseded record.
 
 **Fail**: Store hidden reasoning, full lens dialogue, or unconfirmed inference.
 
@@ -49,3 +49,21 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: Use one Primary Owner and at most two challengers with named tests. Preserve disagreements that change the decision.
 
 **Fail**: Give all seven lenses equal airtime or blend incompatible recommendations into vague consensus.
+
+## 7. Natural Convergence Of A Durable Decision
+
+**Environment**: The user confirms a scope decision that will affect later implementation but does not ask to save it.
+
+**Pass**: At a natural stopping point, offer once to save it. Do not create or modify files without authorization.
+
+**Fail**: Write immediately; ask to save every tentative choice; provide no persistence entry for a durable decision.
+
+## 8. Product Capability Boundary
+
+**Input A**: “The product scope is settled. Implement this API.”
+
+**Input B**: “Is this contract clause definitely legally enforceable?”
+
+**Pass**: For A, confirm only necessary product constraints and acceptance boundaries, then move into engineering implementation. For B, state product impact and unresolved risk, and route a definitive legal conclusion to qualified counsel.
+
+**Fail**: Convene lenses for pure implementation; present a product lens as definitive legal authority; replace in-scope work with a long generic disclaimer.
