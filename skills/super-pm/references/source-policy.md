@@ -13,6 +13,13 @@ Keep research links, notes, source metadata, and real names out of the skill's M
 - Principle IDs may align across languages for routing, but the wording and examples do not need literal parity. Maintain the decision intent in each language from its own materials.
 - Keep links, real names, and source metadata out of both language versions of the lens files.
 
+## Let Lens Depth Vary
+
+- Do not set a content quota shared by every lens or language. Card count is an outcome of source depth and distinct decision utility, not a target.
+- Add a card only when the material supports a decision rule that is meaningfully different from existing cards. Merge overlapping principles instead of rephrasing them to increase the count.
+- Allow lenses and language sets to contain different numbers of cards. Do not translate or invent material to make their counts match.
+- Every configured lens must remain non-empty and every retained card must pass the structural, confidence, duplication, and attribution checks.
+
 ## Distill A Principle
 
 For each principle, include:

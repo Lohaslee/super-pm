@@ -255,6 +255,8 @@ python3 scripts/validate_sources.py
 
 Keep source links, research notes, source metadata, and real names out of the skill's Markdown files. Thinker files contain only decision-ready principle cards. The product workflow does not require every principle to trace to a specific source entry.
 
+Do not target a uniform card count across lenses or languages. Let each lens grow according to source depth and distinct decision utility. Add a card only when it contributes a non-duplicate decision rule; merge overlaps instead of padding a quota. Keep every configured lens non-empty so routing never points to an unusable reference.
+
 Maintain English thinker cards and Chinese thinker cards as two source-material-based sets, not as translations of each other. Preserve stable principle IDs when their decision intent aligns. Run the validator after any language or lens change.
 
 Before changing the workflow, review [behavior-evals.md](references/behavior-evals.md) and [中文行为评测](references/zh-CN/behavior-evals.md). Forward-test the affected cases when an independent evaluation surface is available. For concise software and offline-service examples, read [worked-example.md](references/worked-example.md) in English mode or [中文工作样例](references/zh-CN/worked-example.md) in Chinese mode.

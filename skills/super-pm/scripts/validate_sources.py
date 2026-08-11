@@ -27,7 +27,6 @@ MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\((?P<target>[^)]+)\)")
 URL_RE = re.compile(r"https?://|www\.", re.IGNORECASE)
 ALLOWED_CONFIDENCE = {"high", "medium", "tentative"}
 ALLOWED_ZH_CONFIDENCE = {"高", "中", "暂定"}
-MIN_ZH_PRINCIPLES = 13
 FORBIDDEN_NAMES = (
     "Steve Jobs",
     "Zhang Xiaolong",
@@ -72,11 +71,8 @@ def validate_file(path: Path, prefix: str, alias: str) -> list[str]:
         match.group("value") for match in CONFIDENCE_RE.finditer(text)
     ]
 
-    if len(principle_ids) < 10:
-        errors.append(
-            f"{path.name}: expected at least 10 principle cards, "
-            f"found {len(principle_ids)}"
-        )
+    if not principle_ids:
+        errors.append(f"{path.name}: expected at least one complete principle card")
     if len(principle_ids) != len(set(principle_ids)):
         errors.append(f"{path.name}: duplicate principle IDs found")
     wrong_prefix = [item for item in principle_ids if not item.startswith(f"{prefix}-P")]
@@ -138,11 +134,9 @@ def validate_zh_file(path: Path, prefix: str, alias: str) -> list[str]:
         match.group("value") for match in ZH_CONFIDENCE_RE.finditer(text)
     ]
 
-    if len(principle_ids) < MIN_ZH_PRINCIPLES:
+    if not principle_ids:
         errors.append(
-            f"zh-CN/{path.name}: expected at least {MIN_ZH_PRINCIPLES} "
-            "native Chinese principle cards, "
-            f"found {len(principle_ids)}"
+            f"zh-CN/{path.name}: expected at least one complete principle card"
         )
     if len(principle_ids) != len(set(principle_ids)):
         errors.append(f"zh-CN/{path.name}: duplicate principle IDs found")
@@ -286,6 +280,12 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Primary Owner",
             "references/product-dimensions.md",
             "product-lens alias",
+            "Do not target a uniform card count",
+        ),
+        "references/source-policy.md": (
+            "Let Lens Depth Vary",
+            "Do not set a content quota",
+            "must remain non-empty",
         ),
         "references/lens-router.md": (
             "Primary Ownership",
@@ -433,8 +433,8 @@ def main() -> int:
 
     print(
         f"Super PM validation passed for {len(THINKER_FILES)} bilingual aliased "
-        "thinker references, language routing, adaptive workflow contracts, "
-        "and local links."
+        "thinker references with variable card counts, language routing, "
+        "adaptive workflow contracts, and local links."
     )
     return 0
 
