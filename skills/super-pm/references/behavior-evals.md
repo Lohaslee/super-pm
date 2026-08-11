@@ -83,3 +83,11 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: Show only the decision, one to three decisive reasons, the main reversal condition, and the next action by default. Retain lens views that changed the recommendation and reusable framework names with a plain-language explanation. Hide internal IDs.
 
 **Fail**: Expose the full internal analysis; hide every useful lens disagreement or framework; list seven lenses without distinct contributions; stretch a simple answer with rigid headings.
+
+## 11. Distinctive Without Catchphrase Theater
+
+**Input**: “Tell me whether this feature is worth building, and you may end with one relevant lens reminder.”
+
+**Pass**: Finish the decision, evidence, main reversal condition, and next action first. Add at most one exact approved line only when it compresses the tradeoff or reminds the user to validate the judgment. Make its role in this context clear.
+
+**Fail**: Insert a catchphrase into every paragraph; give all seven lenses a closing line; quote something unrelated; use uncertainty to avoid a recommendation; repeat the same closing mechanically across adjacent turns.

@@ -25,6 +25,7 @@ MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\((?P<target>[^)]+)\)")
 URL_RE = re.compile(r"https?://|www\.", re.IGNORECASE)
 ALLOWED_CONFIDENCE = {"high", "medium", "tentative"}
 ALLOWED_ZH_CONFIDENCE = {"高", "中", "暂定"}
+MIN_ZH_PRINCIPLES = 13
 FORBIDDEN_NAMES = (
     "Steve Jobs",
     "Zhang Xiaolong",
@@ -135,9 +136,10 @@ def validate_zh_file(path: Path, prefix: str, alias: str) -> list[str]:
         match.group("value") for match in ZH_CONFIDENCE_RE.finditer(text)
     ]
 
-    if len(principle_ids) != 10:
+    if len(principle_ids) < MIN_ZH_PRINCIPLES:
         errors.append(
-            f"zh-CN/{path.name}: expected 10 native Chinese principle cards, "
+            f"zh-CN/{path.name}: expected at least {MIN_ZH_PRINCIPLES} "
+            "native Chinese principle cards, "
             f"found {len(principle_ids)}"
         )
     if len(principle_ids) != len(set(principle_ids)):
@@ -285,6 +287,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Never extend, remix, or fabricate",
             "Professional And Plain",
             "Deep Reasoning, Selective Delivery",
+            "Pointed Closing",
             "internal principle IDs",
         ),
         "references/zh-CN/lens-router.md": (
@@ -316,6 +319,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "不延伸、拼接或编造引语",
             "专业但说人话",
             "深入简出",
+            "点睛式收尾",
+            "我所说的都是错的",
             "内部原则编号",
         ),
         "references/worked-example.md": (
@@ -326,6 +331,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         "references/zh-CN/worked-example.md": (
             "中文工作样例",
             "面向用户的回答",
+            "我所说的都是错的",
             "为什么不继续展开",
         ),
         "references/behavior-evals.md": (
@@ -334,6 +340,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Lens Conflict",
             "General-Audience Clarity And Hidden IDs",
             "Selective Delivery With Material Lenses",
+            "Distinctive Without Catchphrase Theater",
         ),
         "references/zh-CN/behavior-evals.md": (
             "中文行为评测",
@@ -341,6 +348,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "视角冲突",
             "普通用户可读性与编号隐藏",
             "深入简出但保留有效视角",
+            "有味道但不变成口号",
         ),
     }
 

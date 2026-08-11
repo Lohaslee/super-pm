@@ -34,6 +34,6 @@ For each principle, include:
 6. Preserve disagreements across dates or contexts instead of manufacturing consistency.
 7. Mark uncertain or indirectly supported principles as tentative.
 
-Keep source IDs and links out of thinker principle cards. A short original quotation may be used when its exact wording is available in the approved skill materials; do not invent or extend quotations.
+Keep source IDs and links out of thinker principle cards. A short original quotation may be used when its exact wording is available in the approved skill materials, including an exact excerpt supplied by the user for this skill. A secondary quote collection can help locate wording but does not by itself justify new attribution when the wording or speaker remains uncertain. Do not invent or extend quotations.
 
 Run `python3 scripts/validate_sources.py` after edits.

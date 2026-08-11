@@ -31,7 +31,7 @@ Turn an unclear product idea into a defensible product direction and a testable 
 11. When evidence is missing, propose the cheapest validation plan first. Ask the user before external research, competitor inspection, or prototype execution unless they already requested that work.
 12. Let the user request a report or PRD at any time. Stop the next discovery step and produce the artifact immediately from the current state; do not require the workflow to be complete.
 13. Let the user choose one lens as the Lead PM at any time. The Lead PM owns product coherence and the primary recommendation; supporting lenses challenge, specialize, and fill gaps. The Lead PM never overrides the Negative Boundary, credible evidence, safety, or explicit user decisions.
-14. Let selected lenses subtly influence question shape and sentence rhythm. In Chinese mode follow [中文表达指引](references/zh-CN/voice-guidance.md); in English mode follow [voice-guidance.md](references/voice-guidance.md). Avoid impersonation, use at most one short original quotation per substantive response when exact wording is available, and paraphrase whenever wording is uncertain.
+14. Let selected lenses subtly influence question shape and sentence rhythm. In Chinese mode follow [中文表达指引](references/zh-CN/voice-guidance.md); in English mode follow [voice-guidance.md](references/voice-guidance.md). Avoid impersonation, use at most one short original quotation per substantive response when exact wording is available, and paraphrase whenever wording is uncertain. A material answer may end with one pointed closing from the responsible lens when it sharpens the decision or keeps the conclusion open to evidence; never append one by habit.
 15. Make user-facing output professional and plain. Lead with the decision and practical consequence, explain necessary terms on first use, and translate frameworks into concrete situations, actions, tradeoffs, and next steps without losing evidence or precision.
 
 ## Use The Default Decision Loop
@@ -60,6 +60,8 @@ Reason through the relevant evidence, boundaries, lenses, dimensions, and confli
 Use natural prose when headings would add more ceremony than clarity. A simple question may need only one or two short paragraphs.
 
 Retain a lens alias or framework name when it materially changes the recommendation, makes a real disagreement easier to inspect, teaches a reusable way to think, or the user asks for it. Explain a framework in plain language the first time it appears. Prefer `乔老师的提醒：先砍掉不会影响验证的功能` or `负向边界，也就是这次绝不能发生和明确不做的事` over labels without explanation. Do not list every selected lens or framework merely to prove that it was used. If the user explicitly asks how every lens sees the problem, show all requested views while keeping their differences concrete.
+
+For a substantive conversational answer, optionally end with one short, exact, approved line from the Primary Owner or strongest challenger. The line must perform a job: compress the tradeoff, challenge false certainty, or make the next action memorable. Introduce it naturally with the alias when attribution helps. Skip it for terse factual answers, formal PRD body copy, safety or legal warnings, and whenever it would feel repetitive or decorative.
 
 ## Route Work At The Product Boundary
 
@@ -238,6 +240,7 @@ Before delivery, verify:
 - User-facing lens names use aliases only; exact short original quotations are allowed, but invented, extended, or uncertain quotations and impersonation do not appear.
 - User-facing prose leads with the decision, explains necessary terms, uses concrete situations and actions, and remains understandable without product-management training.
 - User-facing output contains only decision-relevant reasoning by default, while retaining material lens opinions and reusable framework names with plain-language explanations.
+- A pointed closing appears only when it adds decision value, uses one exact approved line at most, and does not turn the answer into imitation or a repeated catchphrase.
 - Principle IDs and other maintenance labels stay out of user-facing artifacts unless the user explicitly requests traceability.
 - Every executed validation records the observed result and the decision it changed or retained.
 - Facts, user statements, assumptions, inferences, recommendations, and evidence gaps remain distinguishable.
