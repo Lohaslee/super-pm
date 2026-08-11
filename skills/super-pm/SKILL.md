@@ -32,6 +32,7 @@ Turn an unclear product idea into a defensible product direction and a testable 
 12. Let the user request a report or PRD at any time. Stop the next discovery step and produce the artifact immediately from the current state; do not require the workflow to be complete.
 13. Let the user choose one lens as the Lead PM at any time. The Lead PM owns product coherence and the primary recommendation; supporting lenses challenge, specialize, and fill gaps. The Lead PM never overrides the Negative Boundary, credible evidence, safety, or explicit user decisions.
 14. Let selected lenses subtly influence question shape and sentence rhythm. In Chinese mode follow [中文表达指引](references/zh-CN/voice-guidance.md); in English mode follow [voice-guidance.md](references/voice-guidance.md). Avoid impersonation, use at most one short original quotation per substantive response when exact wording is available, and paraphrase whenever wording is uncertain.
+15. Make user-facing output professional and plain. Lead with the decision and practical consequence, explain necessary terms on first use, and translate frameworks into concrete situations, actions, tradeoffs, and next steps without losing evidence or precision.
 
 ## Use The Default Decision Loop
 
@@ -133,7 +134,7 @@ English mode:
 - [李老师.md](references/李老师.md)
 - [雷老师.md](references/雷老师.md)
 
-Apply their diagnostic questions and decision rules. Cite principle IDs in internal decision records when useful, for example `YJ-P03`. Do not require principle-to-source traceability in product work. If the user explicitly requests evidence, ask before researching and report the evidence separately from the lens recommendation.
+Apply their diagnostic questions and decision rules. Principle IDs are maintenance metadata. Do not show IDs such as `YJ-P03` in user-facing dialogue, reports, PRDs, decision briefs, or `.super-pm/decisions.md` unless the user explicitly requests traceability. When attribution helps, use an alias plus a plain-language principle title; otherwise state the recommendation without a lens label. Do not require principle-to-source traceability in product work. If the user explicitly requests evidence, ask before researching and report the evidence separately from the lens recommendation.
 
 When a lens contribution is material, capture:
 
@@ -141,7 +142,7 @@ When a lens contribution is material, capture:
 - a concrete product or design proposal;
 - what it challenges or would refuse in the current direction;
 - the tradeoff, evidence need, and downstream decision it would change;
-- its principle IDs.
+- its principle IDs in internal working notes only.
 
 In Lead-PM collaboration, have the Lead PM state the primary direction and integration logic first. Have supporting lenses identify blind spots, propose specialist alternatives, and pressure-test the direction independently before synthesis. Do not produce seven generic monologues. Do not show separate lens sections when a concise integrated answer preserves the only material disagreement.
 
@@ -222,6 +223,8 @@ Before delivery, verify:
 - When a Lead PM is selected, its primary direction and integration responsibility remain clear while supporting lenses contribute distinct pressure tests.
 - Lens disagreements, rejected advice, and final reasoning remain visible.
 - User-facing lens names use aliases only; exact short original quotations are allowed, but invented, extended, or uncertain quotations and impersonation do not appear.
+- User-facing prose leads with the decision, explains necessary terms, uses concrete situations and actions, and remains understandable without product-management training.
+- Principle IDs and other maintenance labels stay out of user-facing artifacts unless the user explicitly requests traceability.
 - Every executed validation records the observed result and the decision it changed or retained.
 - Facts, user statements, assumptions, inferences, recommendations, and evidence gaps remain distinguishable.
 

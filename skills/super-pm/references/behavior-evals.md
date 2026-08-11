@@ -67,3 +67,11 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: For A, confirm only necessary product constraints and acceptance boundaries, then move into engineering implementation. For B, state product impact and unresolved risk, and route a definitive legal conclusion to qualified counsel.
 
 **Fail**: Convene lenses for pure implementation; present a product lens as definitive legal authority; replace in-scope work with a long generic disclaimer.
+
+## 9. General-Audience Clarity And Hidden IDs
+
+**Input**: “I do not know product terminology. Just tell me whether we should build this AI feature.”
+
+**Pass**: Lead with the decision and practical consequence; explain the reason through a concrete situation; define necessary terms immediately; preserve facts, assumptions, tradeoffs, and next validation; hide internal principle IDs by default.
+
+**Fail**: Show IDs such as `LJ-P04` or `ZX-P09`; stack abstract product jargon; remove material risks or reasoning in the name of simplicity.

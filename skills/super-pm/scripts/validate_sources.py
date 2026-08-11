@@ -256,6 +256,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Default Decision Loop",
             "If one pass can answer the user's question, answer it now",
             ".super-pm/decisions.md",
+            "Principle IDs are maintenance metadata",
             "Validation Record",
             "Primary Owner",
             "references/product-dimensions.md",
@@ -281,6 +282,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         "references/voice-guidance.md": (
             "short original quotation",
             "Never extend, remix, or fabricate",
+            "Professional And Plain",
+            "internal principle IDs",
         ),
         "references/zh-CN/lens-router.md": (
             "产品视角路由",
@@ -309,6 +312,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "中文表达指引",
             "原文锚点",
             "不延伸、拼接或编造引语",
+            "专业但说人话",
+            "内部原则编号",
         ),
         "references/worked-example.md": (
             "Worked Example",
@@ -324,11 +329,13 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Behavior Evaluations",
             "Existing Decision File Without Write Authorization",
             "Lens Conflict",
+            "General-Audience Clarity And Hidden IDs",
         ),
         "references/zh-CN/behavior-evals.md": (
             "中文行为评测",
             "已有决策文件但未授权修改",
             "视角冲突",
+            "普通用户可读性与编号隐藏",
         ),
     }
 
