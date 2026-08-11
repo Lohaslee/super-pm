@@ -16,20 +16,20 @@ Product lenses are intentionally incompatible in places. Preserve the disagreeme
 
 ### Focus vs completeness
 
-- 乔老师 may favor removing features to protect coherence.
-- 李老师 may favor a complete product definition for the target segment.
+- 乔帮主 may favor removing features to protect coherence.
+- 想哥 may favor a complete product definition for the target segment.
 - Resolve by separating a coherent end-to-end promise from broad feature coverage. Keep everything needed for the promise; remove the rest.
 
 ### Restraint vs growth
 
-- 张老师 may resist interruption, manipulation, and social pressure.
+- 龙哥 may resist interruption, manipulation, and social pressure.
 - Commercial objectives may favor more prompts and engagement loops.
 - Resolve with user-value and guardrail metrics. Reject growth that depends on regret, accidental action, or trust erosion.
 
 ### Emotional intensity vs utility
 
 - 梁老师 may expose a strong emotional opportunity.
-- 张老师 may favor a quiet tool that disappears after use.
+- 龙哥 may favor a quiet tool that disappears after use.
 - Resolve according to the user's situation: emotional energy may drive adoption, while interaction should still minimize unnecessary burden.
 
 ### User value vs stakeholder value
@@ -40,7 +40,7 @@ Product lenses are intentionally incompatible in places. Preserve the disagreeme
 
 ### Breakthrough vs feasibility
 
-- 王老师 may push for a differentiated product mechanism.
+- 师母 may push for a differentiated product mechanism.
 - Delivery constraints may favor an incremental release.
 - Resolve by testing the distinctive hypothesis with the smallest credible mechanism, not by removing the differentiation itself.
 
@@ -52,8 +52,8 @@ Product lenses are intentionally incompatible in places. Preserve the disagreeme
 
 ### Speed and reputation vs validation stage
 
-- 雷老师 may push for focus, faster learning loops, visible quality, and word of mouth.
-- 李老师 or 俞老师 may show that the core mechanism or value difference is not yet proven.
+- 军哥 may push for focus, faster learning loops, visible quality, and word of mouth.
+- 想哥 or 俞老师 may show that the core mechanism or value difference is not yet proven.
 - Resolve by accelerating the smallest credible 0-to-1 test, not the full 1-to-10 rollout. Protect safety, core quality, and explicit reversal thresholds.
 
 ## Decision Record

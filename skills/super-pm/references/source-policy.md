@@ -9,7 +9,7 @@ Keep research links, notes, source metadata, and real names out of the skill's M
 - Keep the existing files in `references/` as the English lens set.
 - Keep independently distilled Chinese lens cards in `references/zh-CN/`; do not translate the English cards to produce or repair Chinese content.
 - For Chinese-language thinkers, preserve exact Chinese wording from the supplied Chinese materials when using an `原文锚点`.
-- For 乔老师, keep the English original when exact quotation matters. Treat Chinese wording as explanation rather than an original quotation unless an authoritative Chinese wording is supplied.
+- For 乔帮主, keep the English original when exact quotation matters. Treat Chinese wording as explanation rather than an original quotation unless an authoritative Chinese wording is supplied.
 - Principle IDs may align across languages for routing, but the wording and examples do not need literal parity. Maintain the decision intent in each language from its own materials.
 - Keep links, real names, and source metadata out of both language versions of the lens files.
 

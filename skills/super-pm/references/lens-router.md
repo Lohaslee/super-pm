@@ -6,13 +6,13 @@ Assign one Primary Owner for each decision. Add zero to two challengers only whe
 
 | Decision type | Default Primary Owner | Owns the first recommendation |
 |---|---|---|
-| Focus, subtraction, product coherence, quality, product story | 乔老师 | What must be exceptional, integrated, or refused |
-| Human motivation, attention, social pressure, natural interaction | 张老师 | How the product fits human behavior with restraint |
+| Focus, subtraction, product coherence, quality, product story | 乔帮主 | What must be exceptional, integrated, or refused |
+| Human motivation, attention, social pressure, natural interaction | 龙哥 | How the product fits human behavior with restraint |
 | User state, emotional drive, true need, opportunity change | 梁老师 | Why this need matters now and in which situation |
 | User value, alternatives, switching cost, incentives, tradeoffs | 俞老师 | Whether the value difference justifies the decision |
-| Firsthand insight, breakthrough mechanism, content or recommendation | 王老师 | What differentiated mechanism deserves to exist |
-| Product definition, complete core experience, business loop, organization | 李老师 | What coherent product and delivery system must be built |
-| Timing, focused execution, value-for-money, reputation, review | 雷老师 | How to enter, deliver, learn, and earn word of mouth |
+| Firsthand insight, breakthrough mechanism, content or recommendation | 师母 | What differentiated mechanism deserves to exist |
+| Product definition, complete core experience, business loop, organization | 想哥 | What coherent product and delivery system must be built |
+| Timing, focused execution, value-for-money, reputation, review | 军哥 | How to enter, deliver, learn, and earn word of mouth |
 
 Ownership is decision-specific, not permanent. The same project can have different owners for opportunity, interaction, delivery, and pricing decisions.
 
@@ -29,29 +29,29 @@ If either blank is vague, do not add the lens. Near-duplicate support is not a c
 
 Common legitimate challenges:
 
-- **Focus versus complete core experience**: 乔老师 owns subtraction; 李老师 tests whether the remaining journey is still complete.
-- **Emotional opportunity versus restraint**: 梁老师 owns the motivating state; 张老师 tests whether the design exploits or overloads it.
-- **User value versus system sustainability**: 俞老师 owns the value difference; 李老师 tests whether delivery and economics can sustain it.
-- **Breakthrough versus product coherence**: 王老师 owns the differentiated mechanism; 乔老师 tests whether the rest of the product supports it.
-- **Speed versus validity**: 雷老师 owns the learning cadence; 俞老师 tests whether the experiment can actually change the decision.
-- **Timing versus genuine need**: 雷老师 owns the opportunity window; 梁老师 tests whether a real need exists beneath the trend.
-- **Technology ambition versus user outcome**: 李老师 owns the product route; 乔老师 or 俞老师 tests whether the technology produces a perceptible experience or value difference.
+- **Focus versus complete core experience**: 乔帮主 owns subtraction; 想哥 tests whether the remaining journey is still complete.
+- **Emotional opportunity versus restraint**: 梁老师 owns the motivating state; 龙哥 tests whether the design exploits or overloads it.
+- **User value versus system sustainability**: 俞老师 owns the value difference; 想哥 tests whether delivery and economics can sustain it.
+- **Breakthrough versus product coherence**: 师母 owns the differentiated mechanism; 乔帮主 tests whether the rest of the product supports it.
+- **Speed versus validity**: 军哥 owns the learning cadence; 俞老师 tests whether the experiment can actually change the decision.
+- **Timing versus genuine need**: 军哥 owns the opportunity window; 梁老师 tests whether a real need exists beneath the trend.
+- **Technology ambition versus user outcome**: 想哥 owns the product route; 乔帮主 or 俞老师 tests whether the technology produces a perceptible experience or value difference.
 
 Do not co-route overlapping lenses merely because they share a theme. Pick the owner whose decision rule best matches the actual uncertainty.
 
 ## Common Routes
 
-- **Unclear 0-to-1 idea**: 梁老师 owns whether a real situational need exists. Add 俞老师 only to test value against the current alternative; add 雷老师 only when timing is a separate uncertainty.
-- **Feature request overload**: 乔老师 owns subtraction. Add 李老师 only to protect the complete core journey or 张老师 only when attention and interruption are material.
-- **Social or community product**: 张老师 owns human and social behavior. Add 俞老师 for incentive conflict or 王老师 for a differentiated participation mechanism.
-- **Content or recommendation product**: 王老师 owns the mechanism. Add 梁老师 for user state or 张老师 for attention and restraint.
-- **Hardware or integrated physical/software product**: 李老师 owns the complete product system. Add 乔老师 for end-to-end coherence or 雷老师 for timing, value-for-money, and delivery cadence.
-- **Service or offline experience**: 李老师 owns the complete delivery system. Add 梁老师 for user state or 张老师 for burden, dignity, and natural interaction.
-- **AI product**: assign ownership by the actual decision, not by the technology label. Common owners are 李老师 for product definition, 俞老师 for user value, or 张老师 for interaction and trust.
-- **Interaction or navigation problem**: 张老师 owns the behavioral fit. Add 王老师 only for a distinct interaction mechanism or 乔老师 for end-to-end coherence.
-- **Visual, physical form, or product-character problem**: 乔老师 owns coherence and quality. Add 梁老师 for emotional character or 张老师 for restraint and cognitive load.
-- **Growth versus experience conflict**: 张老师 owns the user boundary. Add 俞老师 for value and incentive analysis or 李老师 for business sustainability.
-- **Execution, pricing, or launch review**: 雷老师 owns timing and execution. Add 俞老师 for user value and economics or 李老师 for delivery-system completeness.
+- **Unclear 0-to-1 idea**: 梁老师 owns whether a real situational need exists. Add 俞老师 only to test value against the current alternative; add 军哥 only when timing is a separate uncertainty.
+- **Feature request overload**: 乔帮主 owns subtraction. Add 想哥 only to protect the complete core journey or 龙哥 only when attention and interruption are material.
+- **Social or community product**: 龙哥 owns human and social behavior. Add 俞老师 for incentive conflict or 师母 for a differentiated participation mechanism.
+- **Content or recommendation product**: 师母 owns the mechanism. Add 梁老师 for user state or 龙哥 for attention and restraint.
+- **Hardware or integrated physical/software product**: 想哥 owns the complete product system. Add 乔帮主 for end-to-end coherence or 军哥 for timing, value-for-money, and delivery cadence.
+- **Service or offline experience**: 想哥 owns the complete delivery system. Add 梁老师 for user state or 龙哥 for burden, dignity, and natural interaction.
+- **AI product**: assign ownership by the actual decision, not by the technology label. Common owners are 想哥 for product definition, 俞老师 for user value, or 龙哥 for interaction and trust.
+- **Interaction or navigation problem**: 龙哥 owns the behavioral fit. Add 师母 only for a distinct interaction mechanism or 乔帮主 for end-to-end coherence.
+- **Visual, physical form, or product-character problem**: 乔帮主 owns coherence and quality. Add 梁老师 for emotional character or 龙哥 for restraint and cognitive load.
+- **Growth versus experience conflict**: 龙哥 owns the user boundary. Add 俞老师 for value and incentive analysis or 想哥 for business sustainability.
+- **Execution, pricing, or launch review**: 军哥 owns timing and execution. Add 俞老师 for user value and economics or 想哥 for delivery-system completeness.
 
 ## Lead PM Collaboration
 

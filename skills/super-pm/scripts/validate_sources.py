@@ -10,14 +10,16 @@ from urllib.parse import unquote
 
 
 THINKER_FILES = {
-    "乔老师.md": ("SJ", "乔老师"),
-    "张老师.md": ("ZX", "张老师"),
+    "乔帮主.md": ("SJ", "乔帮主"),
+    "龙哥.md": ("ZX", "龙哥"),
     "梁老师.md": ("LN", "梁老师"),
     "俞老师.md": ("YJ", "俞老师"),
-    "王老师.md": ("WS", "王老师"),
-    "李老师.md": ("LX", "李老师"),
-    "雷老师.md": ("LJ", "雷老师"),
+    "师母.md": ("WS", "师母"),
+    "想哥.md": ("LX", "想哥"),
+    "军哥.md": ("LJ", "军哥"),
 }
+OFFICIAL_ALIASES = ("乔帮主", "龙哥", "梁老师", "俞老师", "师母", "想哥", "军哥")
+DEPRECATED_ALIASES = ("乔老师", "张老师", "王老师", "李老师", "雷老师")
 PRINCIPLE_RE = re.compile(r"^### (?P<id>[A-Z]{2}-P\d{2})\b", re.MULTILINE)
 CONFIDENCE_RE = re.compile(r"^- Confidence: (?P<value>\S+)\s*$", re.MULTILINE)
 ZH_CONFIDENCE_RE = re.compile(r"^- 可信度：(?P<value>\S+)\s*$", re.MULTILINE)
@@ -243,6 +245,26 @@ def validate_alias_exposure(skill_root: Path) -> list[str]:
                 f"{relative_path}: user-visible real names found: "
                 f"{', '.join(exposed)}"
             )
+        deprecated = [alias for alias in DEPRECATED_ALIASES if alias in text]
+        if deprecated:
+            relative_path = path.relative_to(skill_root)
+            errors.append(
+                f"{relative_path}: deprecated lens aliases found: "
+                f"{', '.join(deprecated)}"
+            )
+
+    for relative_path in (
+        "SKILL.md",
+        "references/voice-guidance.md",
+        "references/zh-CN/voice-guidance.md",
+    ):
+        text = (skill_root / relative_path).read_text(encoding="utf-8")
+        missing = [alias for alias in OFFICIAL_ALIASES if alias not in text]
+        if missing:
+            errors.append(
+                f"{relative_path}: official lens aliases missing: "
+                f"{', '.join(missing)}"
+            )
 
     return errors
 
@@ -263,6 +285,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Validation Record",
             "Primary Owner",
             "references/product-dimensions.md",
+            "product-lens alias",
         ),
         "references/lens-router.md": (
             "Primary Ownership",
@@ -289,6 +312,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Deep Reasoning, Selective Delivery",
             "Pointed Closing",
             "internal principle IDs",
+            "product-lens alias",
         ),
         "references/zh-CN/lens-router.md": (
             "产品视角路由",
@@ -322,6 +346,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "点睛式收尾",
             "我所说的都是错的",
             "内部原则编号",
+            "产品视角化名",
         ),
         "references/worked-example.md": (
             "Worked Example",

@@ -14,7 +14,7 @@ Do not enable automatic delivery by default in this release. Start with “previ
 
 **俞老师's primary view**: The user needs a trustworthy summary delivered with less effort, not automation for its own sake. Measure confirmation, edit, and abandonment rates to see whether the action creates real value.
 
-**乔老师's challenge**: If confirmation saves little time over copy-and-paste, do not build even this flow. Technical feasibility is not a reason to add another button.
+**乔帮主's challenge**: If confirmation saves little time over copy-and-paste, do not build even this flow. Technical feasibility is not a reason to add another button.
 
 Protect the **Negative Boundary**, meaning what must not happen and what this release explicitly excludes:
 
@@ -40,9 +40,9 @@ Known facts: some customers live alone; the service can contact customers and em
 
 A refund is not enough. For a customer who lives alone, returning the money does not resolve who will help, when help will arrive, or whether the customer is safe.
 
-**李老师's primary view**: Validate a three-level recovery process with human dispatch: confirm the customer's status within 10 minutes; prioritize a replacement; otherwise let the customer choose a delay or reschedule. Escalate immediate safety risks to an emergency contact or local emergency services, and do not present ordinary home care as medical response.
+**想哥's primary view**: Validate a three-level recovery process with human dispatch: confirm the customer's status within 10 minutes; prioritize a replacement; otherwise let the customer choose a delay or reschedule. Escalate immediate safety risks to an emergency contact or local emergency services, and do not present ordinary home care as medical response.
 
-**雷老师's challenge**: Permanent backup capacity for every order may make costs unsustainable. Start with higher-risk customers, core service areas, and defined hours, then expand only if the model works.
+**军哥's challenge**: Permanent backup capacity for every order may make costs unsustainable. Start with higher-risk customers, core service areas, and defined hours, then expand only if the model works.
 
 Two frameworks matter here: **Use and Delivery**, meaning who contacts the customer, takes ownership, and restores the service after interruption; and **Experience and Trust**, meaning the service must not hide the cancellation or falsely show “on the way.” Also protect the Negative Boundary:
 
