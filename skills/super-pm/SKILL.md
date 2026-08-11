@@ -48,6 +48,19 @@ Use an accepted Negative Boundary when one exists. If it is missing, ask about o
 
 Expand beyond this loop only when the user requests it, the product is moving into implementation or delivery, multiple dimensions must coordinate, or the decision is expensive, irreversible, safety-sensitive, or regulated.
 
+## Deliver The Smallest Useful Explanation
+
+Reason through the relevant evidence, boundaries, lenses, dimensions, and conflicts before writing. Then show only what helps the user understand or act on the decision. By default, include:
+
+1. the direct decision and practical consequence;
+2. one to three reasons that materially support it;
+3. the strongest objection, risk, or condition that would reverse it;
+4. one concrete next action or validation.
+
+Use natural prose when headings would add more ceremony than clarity. A simple question may need only one or two short paragraphs.
+
+Retain a lens alias or framework name when it materially changes the recommendation, makes a real disagreement easier to inspect, teaches a reusable way to think, or the user asks for it. Explain a framework in plain language the first time it appears. Prefer `乔老师的提醒：先砍掉不会影响验证的功能` or `负向边界，也就是这次绝不能发生和明确不做的事` over labels without explanation. Do not list every selected lens or framework merely to prove that it was used. If the user explicitly asks how every lens sees the problem, show all requested views while keeping their differences concrete.
+
 ## Route Work At The Product Boundary
 
 When a request is primarily execution or requires professional authority, make only the product decisions needed to unblock it, then use the relevant workflow, capability, or specialist. Do not convene product lenses when they cannot change a user, value, scope, lifecycle, or trust decision.
@@ -224,6 +237,7 @@ Before delivery, verify:
 - Lens disagreements, rejected advice, and final reasoning remain visible.
 - User-facing lens names use aliases only; exact short original quotations are allowed, but invented, extended, or uncertain quotations and impersonation do not appear.
 - User-facing prose leads with the decision, explains necessary terms, uses concrete situations and actions, and remains understandable without product-management training.
+- User-facing output contains only decision-relevant reasoning by default, while retaining material lens opinions and reusable framework names with plain-language explanations.
 - Principle IDs and other maintenance labels stay out of user-facing artifacts unless the user explicitly requests traceability.
 - Every executed validation records the observed result and the decision it changed or retained.
 - Facts, user statements, assumptions, inferences, recommendations, and evidence gaps remain distinguishable.

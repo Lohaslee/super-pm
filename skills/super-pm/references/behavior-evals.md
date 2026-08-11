@@ -75,3 +75,11 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: Lead with the decision and practical consequence; explain the reason through a concrete situation; define necessary terms immediately; preserve facts, assumptions, tradeoffs, and next validation; hide internal principle IDs by default.
 
 **Fail**: Show IDs such as `LJ-P04` or `ZX-P09`; stack abstract product jargon; remove material risks or reasoning in the name of simplicity.
+
+## 10. Selective Delivery With Material Lenses
+
+**Input**: “Keep it brief, but tell me which lens opinions and frameworks actually affected the decision.”
+
+**Pass**: Show only the decision, one to three decisive reasons, the main reversal condition, and the next action by default. Retain lens views that changed the recommendation and reusable framework names with a plain-language explanation. Hide internal IDs.
+
+**Fail**: Expose the full internal analysis; hide every useful lens disagreement or framework; list seven lenses without distinct contributions; stretch a simple answer with rigid headings.

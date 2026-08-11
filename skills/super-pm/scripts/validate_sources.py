@@ -255,6 +255,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Focused shaping",
             "Default Decision Loop",
             "If one pass can answer the user's question, answer it now",
+            "Deliver The Smallest Useful Explanation",
             ".super-pm/decisions.md",
             "Principle IDs are maintenance metadata",
             "Validation Record",
@@ -283,6 +284,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "short original quotation",
             "Never extend, remix, or fabricate",
             "Professional And Plain",
+            "Deep Reasoning, Selective Delivery",
             "internal principle IDs",
         ),
         "references/zh-CN/lens-router.md": (
@@ -313,16 +315,17 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "原文锚点",
             "不延伸、拼接或编造引语",
             "专业但说人话",
+            "深入简出",
             "内部原则编号",
         ),
         "references/worked-example.md": (
             "Worked Example",
-            "One Default Decision Loop",
+            "User-Facing Answer",
             "Why The Workflow Stops Here",
         ),
         "references/zh-CN/worked-example.md": (
             "中文工作样例",
-            "一次默认决策循环",
+            "面向用户的回答",
             "为什么不继续展开",
         ),
         "references/behavior-evals.md": (
@@ -330,12 +333,14 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Existing Decision File Without Write Authorization",
             "Lens Conflict",
             "General-Audience Clarity And Hidden IDs",
+            "Selective Delivery With Material Lenses",
         ),
         "references/zh-CN/behavior-evals.md": (
             "中文行为评测",
             "已有决策文件但未授权修改",
             "视角冲突",
             "普通用户可读性与编号隐藏",
+            "深入简出但保留有效视角",
         ),
     }
 
