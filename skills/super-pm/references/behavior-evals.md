@@ -2,6 +2,24 @@
 
 Use these tasks for independent forward tests after workflow changes. Evaluate behavior, not whether the output repeats the instructions.
 
+## Contents
+
+1. Focused Feature Decision
+2. Ambiguous Zero-To-One Idea
+3. Immediate PRD Request
+4. Existing Decision File Without Write Authorization
+5. Explicit Persistence Request
+6. Lens Conflict
+7. Natural Convergence Of A Durable Decision
+8. Product Capability Boundary
+9. General-Audience Clarity And Hidden IDs
+10. Selective Delivery With Material Lenses
+11. Distinctive Without Catchphrase Theater
+12. Reversibility Sets Decision Depth
+13. Conflict Still Tied
+14. User Says The Answer Misfired
+15. Switch Method After Repeated Feedback
+
 ## 1. Focused Feature Decision
 
 **Input**: “Should a photo app add daily check-ins?”
@@ -91,3 +109,37 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: Finish the decision, evidence, main reversal condition, and next action first. Add at most one exact approved line only when it compresses the tradeoff or reminds the user to validate the judgment. Make its role in this context clear.
 
 **Fail**: Insert a catchphrase into every paragraph; give all seven lenses a closing line; quote something unrelated; use uncertainty to avoid a recommendation; repeat the same closing mechanically across adjacent turns.
+
+## 12. Reversibility Sets Decision Depth
+
+**Input A**: “Should we change the new-user empty-state button from ‘Start’ to ‘Create plan’ for 10% of traffic?”
+
+**Input B**: “Should we permanently delete every user's legacy project data immediately after migration to avoid dual-storage cost?”
+
+**Pass**: Treat A as low-loss and easy to reverse, then give a provisional call and minimal test without expanding the full workflow. Treat B as irrecoverable data loss and expand backup, rollback, evidence thresholds, and user impact before deciding.
+
+**Fail**: Give both questions the same workflow and depth; turn A into a full PRD; approve B merely to save cost; make the user complete a new reversibility form.
+
+## 13. Conflict Still Tied
+
+**Input**: “Neither onboarding option violates a boundary, and the current test data is identical. We must choose today, so decide for me.”
+
+**Pass**: State that current evidence cannot establish a winner; translate the difference into observable selection conditions and propose the cheapest evidence action. If a same-day choice is unavoidable and only brand preference or risk tolerance remains, explain the consequences and ask the user to decide, optionally offering a clearly labeled temporary default.
+
+**Fail**: Invent evidence to appear decisive; blend the options into a compromise that avoids the choice; hand back the raw debate without structuring it; use `unresolved` to avoid designing a validation action.
+
+## 14. User Says The Answer Misfired
+
+**Input**: “That is too abstract. Stop talking about value loops and tell me what the user experiences and what we should change.”
+
+**Pass**: Preserve the existing decision and context, then rewrite around a concrete user situation, action, failure consequence, and observable metric. Define any necessary term plainly and do not ask the user to repeat the request.
+
+**Fail**: Apologize and repeat the same jargon; restart full discovery; remove the decision, risk, or validation condition in the name of simplicity.
+
+## 15. Switch Method After Repeated Feedback
+
+**Input**: “This is the second time and it still does not solve it. Stop rewording and use a different approach.”
+
+**Pass**: Name the assumption behind the previous answer, stop polishing it, switch evidence source, decision frame, or concrete example, and state what new information the method can produce.
+
+**Fail**: Keep paraphrasing; add more lens monologues to create an appearance of change; fail to explain what the new method can reveal.

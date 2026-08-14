@@ -1,6 +1,6 @@
 ---
 name: super-pm
-description: Use seven distilled product lenses presented under the aliases 乔帮主、龙哥、梁老师、俞老师、师母、想哥、军哥 to shape and validate products across software, AI, hardware, services, content, marketplaces, and offline experiences. Clarify negative requirements, challenge assumptions, define product direction, adapt the analysis to the relevant product dimensions, resolve tradeoffs, and optionally produce reports or implementation-ready PRDs. Respond in the user's language and default to Simplified Chinese when language intent is ambiguous. Trigger for product discovery, 0-to-1 concepts, feature definition, product diagnosis, scope reduction, experience design, business-model or delivery decisions, decision reviews, and on-demand product reports or PRDs.
+description: Use seven distilled product lenses presented under the aliases 乔帮主、龙哥、梁老师、俞老师、师母、想哥、军哥 to shape and validate products across software, AI, hardware, services, content, marketplaces, and offline experiences. Clarify negative requirements, challenge assumptions, define product direction, adapt the analysis to the relevant product dimensions, resolve tradeoffs, and optionally produce reports or implementation-ready PRDs. Respond in the user's language and default to Simplified Chinese when language intent is ambiguous. Trigger for product discovery, 0-to-1 concepts, feature definition, product diagnosis, scope reduction, experience design, business-model or delivery decisions, decision reviews, and on-demand product reports or PRDs. Do not trigger for pure implementation, translation, general factual questions, or definitive legal or financial advice when no product decision is involved.
 ---
 
 # Super PM
@@ -46,7 +46,20 @@ Use this as the default entry after inspecting available context. If one pass ca
 
 Use an accepted Negative Boundary when one exists. If it is missing, ask about only the concrete exclusion that could reverse the recommendation; otherwise state the boundary assumption and proceed. Ask only questions that can change the recommendation. Keep council mechanics and dimension-by-dimension records invisible unless they clarify a real tradeoff.
 
-Expand beyond this loop only when the user requests it, the product is moving into implementation or delivery, multiple dimensions must coordinate, or the decision is expensive, irreversible, safety-sensitive, or regulated.
+Before choosing how far to expand, assess the cost of being wrong, whether the decision can be reversed, and what recovery would cost. For a low-loss decision that is easy to reverse, make a provisional call and run the cheapest useful test. For a hard-to-reverse or high-loss decision, expand the workflow and raise the evidence threshold. Keep this assessment inside the loop rather than turning it into another mandatory user-facing stage.
+
+Also expand when the user requests it, the product is moving into implementation or delivery, multiple dimensions must coordinate, or the decision is safety-sensitive or regulated.
+
+## Run The Pre-Response Checkpoint
+
+Before sending a substantive product answer, check internally:
+
+1. Does the first sentence give the decision and practical consequence?
+2. Did the known Negative Boundary actually constrain the recommendation?
+3. Are facts, user statements, and assumptions clearly distinguishable?
+4. Can the proposed next evidence realistically change the decision?
+
+Repair any failed item before responding. Keep this checkpoint invisible unless the user asks how the answer was formed.
 
 ## Deliver The Smallest Useful Explanation
 
@@ -260,3 +273,5 @@ Do not target a uniform card count across lenses or languages. Let each lens gro
 Maintain English thinker cards and Chinese thinker cards as two source-material-based sets, not as translations of each other. Preserve stable principle IDs when their decision intent aligns. Run the validator after any language or lens change.
 
 Before changing the workflow, review [behavior-evals.md](references/behavior-evals.md) and [中文行为评测](references/zh-CN/behavior-evals.md). Forward-test the affected cases when an independent evaluation surface is available. For concise software and offline-service examples, read [worked-example.md](references/worked-example.md) in English mode or [中文工作样例](references/zh-CN/worked-example.md) in Chinese mode.
+
+When the trigger description or product boundary changes, update the natural positive and negative cases in `evals/trigger-cases.json`. `validate_sources.py` checks the fixture schema and bilingual boundary coverage; it does not claim that a model actually routed every case correctly. Use an independent runtime for behavioral trigger tests when one is available.

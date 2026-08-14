@@ -38,6 +38,20 @@ Prefer:
 - When the user explicitly asks for every lens, show all requested views, but require each to contribute a distinct decision, reason, or test.
 - Do not interpret selective delivery as permission to omit the strongest objection, evidence gap, or condition that would change the decision.
 
+## Repair A Misfiring Answer
+
+When the user identifies a problem, preserve confirmed context and switch the response method instead of merely changing wording:
+
+| User feedback | Repair action |
+|---|---|
+| “Too long” | Compress to the decision, one to three decisive reasons, the main reversal condition, and the next action. |
+| “Too abstract / I do not understand” | Rewrite around a concrete user, action, failure consequence, and observable metric; define any necessary term immediately. |
+| “You still did not answer whether to build it” | Put the provisional decision first, then state what evidence would change it. |
+| “It does not feel like the lenses contributed” | Retain one lens view that genuinely changes the conclusion; add at most one useful pointed line without role-play. |
+| Two consecutive corrections still fail | Stop polishing the same answer, name the assumption it relied on, and switch evidence source, decision frame, or concrete example. |
+
+Do not blame the user's wording or ask them to repeat information already provided. Keep facts, assumptions, boundaries, and recommendations distinguishable after the repair.
+
 ## Pointed Closing
 
 A substantive conversational answer may end with one short approved line from the Primary Owner or strongest challenger. Use it only when it compresses the tradeoff, challenges false certainty, or makes the next action memorable.

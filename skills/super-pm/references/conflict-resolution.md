@@ -12,6 +12,17 @@ Product lenses are intentionally incompatible in places. Preserve the disagreeme
 6. Prefer reversible tests when evidence is weak.
 7. Use a thinker's preference only as a final heuristic.
 
+## When The Rules Still Tie
+
+If the Negative Boundary, evidence, primary-user value, product objective, delivery constraints, and reversibility still leave the options tied:
+
+1. Mark the decision `unresolved`; do not manufacture consensus to appear decisive.
+2. Translate the disagreement into observable conditions: what result would select A, and what result would select B.
+3. Design the cheapest evidence-gathering action; prefer a safe, reversible test when one is available.
+4. If the remaining difference comes down to a user value preference or risk tolerance, or proportionate evidence cannot resolve it, explain each consequence and ask the user to decide.
+
+Do not hand the user an unprocessed debate. First define the evidence conditions and validation path, then return only the choice that genuinely requires user authority.
+
 ## Common Tensions
 
 ### Focus vs completeness
@@ -64,7 +75,7 @@ Lead PM when selected:
 Option A / supporting principles:
 Option B / supporting principles:
 Evidence and constraints:
-Decision:
+Decision status and conclusion (provisional / confirmed / unresolved):
 Why the rejected option lost:
 Revisit trigger:
 ```

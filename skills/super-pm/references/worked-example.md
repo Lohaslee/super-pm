@@ -51,3 +51,35 @@ Two frameworks matter here: **Use and Delivery**, meaning who contacts the custo
 - Protected qualities: transparent status, customer choice, and one accountable owner for every exception.
 
 Next, use a human on-call operator for 30 cancellation incidents in one area. Aim to contact at least 90% of customers within 10 minutes, give at least 80% a replacement or confirmed alternative within 30 minutes, and close no case without a clear arrangement. Record recovery cost per incident before building automated dispatch.
+
+## 3. A Vague One-Sentence Idea
+
+### User Question
+
+“I want to build a product that helps people stick to their goals.”
+
+### First Response
+
+Do not start with check-ins, reminders, or leaderboards. First, help rule out three ways the product could go wrong:
+
+1. Must it avoid streak loss, shame, or anxiety as pressure to continue?
+2. Is public ranking or friend supervision explicitly out of scope for this release?
+3. Which person and moment should come first: someone who cannot start, someone who starts and then stops, or someone with too many goals to choose from?
+
+### User Clarification
+
+“No punishment and no social features for now. Start with people who know what to do but delay until they never begin.”
+
+### Converged Response
+
+Then do not build an all-purpose goal manager in the first release. Test a narrower promise: help someone who already knows the goal complete the first two-minute action at the moment they usually delay.
+
+The provisional **Negative Boundary** is: no streak punishment or anxiety-driven pressure; no public ranking or friend supervision; no long-term review or complex goal planning yet. Based on the current description, treat the ability to restart without penalty after an interruption as a protected-quality assumption to confirm, not as an established fact.
+
+**梁老师's reminder**: The emotion here is not a lack of goals but the self-blame and pressure that build while the user fails to start. Help the user cross that first small threshold instead of giving them another plan to maintain.
+
+Next, recruit eight people who regularly delay starting and run a three-day concierge test. Each day, rewrite one task into a first action that takes under two minutes. If at least five begin within 10 minutes of receiving that action, then consider reminders, progress, and retention. Otherwise, improve the specificity of the first action before adding features.
+
+### Why This Example Starts With Exclusions
+
+When the user supplies only a vague sentence, concrete options to reject are easier to answer than a request for a complete vision. These three questions are enough to form a provisional direction, so do not traverse every product dimension or generate a PRD.

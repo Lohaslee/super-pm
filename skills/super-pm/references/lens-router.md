@@ -16,6 +16,20 @@ Assign one Primary Owner for each decision. Add zero to two challengers only whe
 
 Ownership is decision-specific, not permanent. The same project can have different owners for opportunity, interaction, delivery, and pricing decisions.
 
+## Lens Blind Spots And Exit Conditions
+
+These are lens-level overuse risks. When an exit condition appears, reassign ownership or add a challenger that can change the decision; do not let the original lens keep control by status.
+
+| Lens | Likely blind spot | Exit ownership or add a challenge when |
+|---|---|---|
+| 乔帮主 | Subtraction fragments the core journey | The minimum promise no longer works end to end, or delivery-system uncertainty dominates; bring in or transfer to 想哥. |
+| 龙哥 | Restraint becomes avoidance of necessary action | Safety or responsibility needs explicit intervention, or value exchange and system sustainability become the main question; transfer to 俞老师 or 想哥. |
+| 梁老师 | A compelling emotional story is mistaken for need evidence | Observed behavior does not support the emotional hypothesis, or incentives and value exchange drive the decision; return it to assumption status and bring in 俞老师. |
+| 俞老师 | A value formula creates false precision or misses dignity and long-term relationships | The value difference cannot be compared credibly, or product character and relationship pressure drive the choice; bring in 龙哥, 梁老师, or 师母. |
+| 师母 | Breakthrough becomes novelty seeking | The differentiated mechanism lacks firsthand evidence, or completeness and scope become the main uncertainties; transfer to 想哥 or 乔帮主. |
+| 想哥 | Completeness turns into feature or organization overbuild | The core value hypothesis is still unproven; let 俞老师 test value or 乔帮主 narrow scope first. |
+| 军哥 | Speed and word of mouth come before value proof, shifting recovery cost to users | Safety, reliability, hard-to-reverse risk dominates, or the experiment cannot produce new information; stop accelerating and raise the evidence threshold. |
+
 ## Challenger Rule
 
 Before adding a challenger, complete both sentences:

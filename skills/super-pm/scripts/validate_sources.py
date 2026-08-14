@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -273,6 +274,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Focused shaping",
             "Default Decision Loop",
             "If one pass can answer the user's question, answer it now",
+            "Pre-Response Checkpoint",
+            "Do not trigger for pure implementation",
             "Deliver The Smallest Useful Explanation",
             ".super-pm/decisions.md",
             "Principle IDs are maintenance metadata",
@@ -281,6 +284,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "references/product-dimensions.md",
             "product-lens alias",
             "Do not target a uniform card count",
+            "evals/trigger-cases.json",
         ),
         "references/source-policy.md": (
             "Let Lens Depth Vary",
@@ -289,6 +293,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         ),
         "references/lens-router.md": (
             "Primary Ownership",
+            "Lens Blind Spots And Exit Conditions",
             "Challenger Rule",
         ),
         "references/product-dimensions.md": (
@@ -310,6 +315,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "Never extend, remix, or fabricate",
             "Professional And Plain",
             "Deep Reasoning, Selective Delivery",
+            "Repair A Misfiring Answer",
             "Pointed Closing",
             "internal principle IDs",
             "product-lens alias",
@@ -317,6 +323,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         "references/zh-CN/lens-router.md": (
             "产品视角路由",
             "主责分工",
+            "整体盲点与退出主责条件",
             "挑战者门槛",
         ),
         "references/zh-CN/product-dimensions.md": (
@@ -343,6 +350,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "不延伸、拼接或编造引语",
             "专业但说人话",
             "深入简出",
+            "回答跑偏后的修复",
             "点睛式收尾",
             "我所说的都是错的",
             "内部原则编号",
@@ -366,6 +374,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "General-Audience Clarity And Hidden IDs",
             "Selective Delivery With Material Lenses",
             "Distinctive Without Catchphrase Theater",
+            "User Says The Answer Misfired",
+            "Switch Method After Repeated Feedback",
         ),
         "references/zh-CN/behavior-evals.md": (
             "中文行为评测",
@@ -374,6 +384,8 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
             "普通用户可读性与编号隐藏",
             "深入简出但保留有效视角",
             "有味道但不变成口号",
+            "用户指出回答跑偏",
+            "连续反馈后换方法",
         ),
     }
 
@@ -402,6 +414,73 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
     return errors
 
 
+def validate_trigger_cases(skill_root: Path) -> list[str]:
+    path = skill_root / "evals" / "trigger-cases.json"
+    if not path.exists():
+        return ["missing trigger evaluation fixture: evals/trigger-cases.json"]
+
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        return [f"evals/trigger-cases.json: invalid JSON: {error}"]
+
+    errors: list[str] = []
+    if payload.get("version") != 1:
+        errors.append("evals/trigger-cases.json: version must be 1")
+
+    cases = payload.get("cases")
+    if not isinstance(cases, list):
+        return errors + ["evals/trigger-cases.json: cases must be a list"]
+
+    seen_ids: set[str] = set()
+    coverage = {
+        (language, expected): 0
+        for language in ("zh-CN", "en")
+        for expected in ("use", "do_not_use")
+    }
+    for index, case in enumerate(cases):
+        label = f"evals/trigger-cases.json: case {index + 1}"
+        if not isinstance(case, dict):
+            errors.append(f"{label} must be an object")
+            continue
+
+        case_id = case.get("id")
+        language = case.get("language")
+        prompt = case.get("prompt")
+        expected = case.get("expected")
+        rationale = case.get("rationale")
+
+        if not isinstance(case_id, str) or not case_id.strip():
+            errors.append(f"{label} needs a non-empty id")
+        elif case_id in seen_ids:
+            errors.append(f"{label} duplicates id '{case_id}'")
+        else:
+            seen_ids.add(case_id)
+
+        if language not in ("zh-CN", "en"):
+            errors.append(f"{label} has invalid language '{language}'")
+        if expected not in ("use", "do_not_use"):
+            errors.append(f"{label} has invalid expected value '{expected}'")
+        if language in ("zh-CN", "en") and expected in ("use", "do_not_use"):
+            coverage[(language, expected)] += 1
+
+        if not isinstance(prompt, str) or not prompt.strip():
+            errors.append(f"{label} needs a non-empty prompt")
+        elif "$super-pm" in prompt or "super pm" in prompt.casefold():
+            errors.append(f"{label} must test natural routing without naming the skill")
+        if not isinstance(rationale, str) or not rationale.strip():
+            errors.append(f"{label} needs a non-empty rationale")
+
+    for (language, expected), count in coverage.items():
+        if count < 2:
+            errors.append(
+                "evals/trigger-cases.json: expected at least 2 "
+                f"{language} cases for '{expected}', found {count}"
+            )
+
+    return errors
+
+
 def main() -> int:
     skill_root = Path(__file__).resolve().parent.parent
     references = skill_root / "references"
@@ -424,9 +503,10 @@ def main() -> int:
     errors.extend(validate_local_links(skill_root))
     errors.extend(validate_alias_exposure(skill_root))
     errors.extend(validate_workflow_contract(skill_root))
+    errors.extend(validate_trigger_cases(skill_root))
 
     if errors:
-        print("Lens validation failed:")
+        print("Super PM validation failed:")
         for error in errors:
             print(f"- {error}")
         return 1
@@ -434,7 +514,7 @@ def main() -> int:
     print(
         f"Super PM validation passed for {len(THINKER_FILES)} bilingual aliased "
         "thinker references with variable card counts, language routing, "
-        "adaptive workflow contracts, and local links."
+        "adaptive workflow contracts, trigger evaluation coverage, and local links."
     )
     return 0
 
