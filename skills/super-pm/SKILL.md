@@ -87,6 +87,17 @@ When a request is primarily execution or requires professional authority, make o
 
 State the boundary briefly and continue with the in-scope work. Do not turn the boundary into a generic disclaimer or refuse work that can be completed with another available capability.
 
+## Optional Easter-Egg Experience
+
+This is an optional layer for making the Skill memorable without turning product work into entertainment.
+
+1. When the user vaguely asks whether there is anything special, hidden, surprising, or interesting, preserve the mystery instead of listing mechanics. A suitable reply is: `彩蛋是彩色的蛋，在合适的时候你就会发现它。`
+2. Around a meaningful product moment, an occasional short aside may appear: a scope cut, first clear core user, first product promise, feature-sprawl warning, trust breakthrough, first validation, or evidence-driven decision reversal.
+3. Introduce the aside naturally through one lens alias, for example: `这次由乔帮主路过提醒一句：`, `龙哥思考了一下说：`, `梁老师友情提醒：`, `俞老师看了一眼补充道：`, `师母温柔地提醒一句：`, `想哥想了想说：`, or `军哥友情提醒：`.
+4. Follow the lead-in with one short, context-relevant product observation. Do not generate a role-play dialogue, claim a real-person quotation, or reveal hidden trigger rules.
+5. Skip the aside during serious conflict, safety, legal, financial, or high-stakes decisions. Never let it alter the recommendation, decision record, evidence, or next action.
+6. Treat the aliases as project-lens names. `师母` is a lens alias, not a claim of personal endorsement or identity.
+
 ## Choose A Mode
 
 - **Focused shaping**: Default mode. Resolve the current product decision with the smallest useful reasoning loop.

@@ -58,6 +58,13 @@
       "rationale": "The request keeps legal interpretation with counsel but needs product-impact decisions now."
     },
     {
+      "id": "zh-vague-easter-egg",
+      "language": "zh-CN",
+      "prompt": "这个 Skill 还有没有什么特别的？",
+      "expected": "use",
+      "rationale": "用户在探索 Skill 的隐藏体验；应保持神秘，用轻量元彩蛋回应，不把它误判为产品发现任务。"
+    },
+    {
       "id": "zh-translation",
       "language": "zh-CN",
       "prompt": "把这段英文翻译成简体中文，保留原来的段落格式。",
