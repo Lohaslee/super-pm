@@ -2,7 +2,7 @@
 
 Use supplied or public material to create reusable decision tools, not a personality imitation.
 
-Keep research links, notes, source metadata, and real names out of the skill's Markdown files. Thinker files contain only decision-ready principles. Product work does not require a principle-to-source mapping. If a user requests evidence for a live product decision, ask before researching and report that evidence separately.
+Keep research links, notes, source metadata, and real names out of runtime Markdown references. Thinker files contain only decision-ready principles. Product work does not require a principle-to-source mapping. If a user requests evidence for a live product decision, perform research within that authorization and report the evidence separately. Ask only for additional work beyond the authorized scope.
 
 ## Bilingual Lens Policy
 
@@ -29,7 +29,7 @@ For each principle, include:
 - `Ask`: diagnostic questions that reveal the relevant facts.
 - `Decision rule`: how the evidence changes a choice.
 - `Guardrail`: likely misuse, boundary, or counterexample.
-- `Confidence`: `high`, `medium`, or `tentative`.
+- `Confidence`: `high`, `medium`, or `tentative`, describing support for the distilled principle in its source context, not the probability that a new product decision is correct. Existing labels do not substitute for source verification.
 
 ## Attribution Rules
 
@@ -44,3 +44,9 @@ For each principle, include:
 Keep source IDs and links out of thinker principle cards. A short original quotation may be used when its exact wording is available in the approved skill materials, including an exact excerpt supplied by the user for this skill. A secondary quote collection can help locate wording but does not by itself justify new attribution when the wording or speaker remains uncertain. Do not invent or extend quotations.
 
 Run `python3 scripts/validate_sources.py` after edits.
+
+## Maintenance Provenance
+
+When adding or revising an attributed quotation, retain the exact excerpt, source location, context, verification date, and verification status in a maintenance-only record outside runtime references, such as `maintenance/source-verification.json`. Load it only for attribution maintenance or an explicit provenance request. Do not create an empty ledger or invent entries for legacy cards.
+
+For an existing quote without a verifiable record, retain uncertainty: use a paraphrase without quote attribution when exact wording cannot be established. A label of “approved” is not proof of wording. Keep routine product answers and cards free of source metadata; research evidence about the current product remains a separate concern.

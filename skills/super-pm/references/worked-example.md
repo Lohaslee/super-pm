@@ -1,5 +1,7 @@
 # Worked Examples
 
+Sample sizes, times, and percentages below are illustrative working targets, not industry baselines or validated thresholds. In real work, explain them using current performance, error consequences, and affordable cost. Small samples reveal mechanisms and failures; they do not establish market demand. Care-service timing examples are not validated safety standards.
+
 ## 1. Automatic Meeting-Note Delivery
 
 ### User Question
@@ -83,3 +85,22 @@ Next, recruit eight people who regularly delay starting and run a three-day conc
 ### Why This Example Starts With Exclusions
 
 When the user supplies only a vague sentence, concrete options to reject are easier to answer than a request for a complete vision. These three questions are enough to form a provisional direction, so do not traverse every product dimension or generate a PRD.
+
+## 4. One Question, Distinct Decisions
+
+### User Question
+
+“Should a task tool add reminders? Show what 龙哥 and 俞老师 would change concretely.”
+
+### User-Facing Answer
+
+Do not add default daily reminders yet. If testing reminders, start with one reminder that the user deliberately sets for a particular task. We have no activation or interruption evidence, so this is provisional.
+
+- **龙哥 changes the interaction**: let the user choose the time, open the relevant task directly, and cancel easily. Ignoring a reminder should not escalate pressure. The test concerns whether help becomes an unwanted demand.
+- **俞老师 changes the build scope**: compare the phone reminder users already have. If the new flow adds setup and duplicate entry without making it easier to start, even a well-behaved reminder may not be worth building. The test concerns benefit after setup and switching costs.
+
+These views need not disagree: one constrains the interaction, the other challenges building it at all. Compare the existing method and candidate flow on the same real task; observe setup burden, whether work starts, and whether the user wants reminders disabled.
+
+### Remove The Names
+
+The tests should remain distinguishable as interaction pressure versus alternatives and build scope. If both collapse into generic user-focus and validation advice, consolidate them or select a different test rather than adding slogans.

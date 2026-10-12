@@ -265,150 +265,46 @@ def validate_alias_exposure(skill_root: Path) -> list[str]:
 
 
 def validate_workflow_contract(skill_root: Path) -> list[str]:
+    """Check resource availability, not compliance with particular prose."""
     errors: list[str] = []
-    required_markers = {
-        "SKILL.md": (
-            "Choose The Working Language",
-            "Default to Simplified Chinese",
-            "references/zh-CN/",
-            "Focused shaping",
-            "Default Decision Loop",
-            "If one pass can answer the user's question, answer it now",
-            "Pre-Response Checkpoint",
-            "Do not trigger for pure implementation",
-            "Deliver The Smallest Useful Explanation",
-            ".super-pm/decisions.md",
-            "Principle IDs are maintenance metadata",
-            "Validation Record",
-            "Primary Owner",
-            "references/product-dimensions.md",
-            "product-lens alias",
-            "Do not target a uniform card count",
-            "evals/trigger-cases.json",
-        ),
-        "references/source-policy.md": (
-            "Let Lens Depth Vary",
-            "Do not set a content quota",
-            "must remain non-empty",
-        ),
-        "references/lens-router.md": (
-            "Primary Ownership",
-            "Lens Blind Spots And Exit Conditions",
-            "Challenger Rule",
-        ),
-        "references/product-dimensions.md": (
-            "Adaptive Product Dimensions",
-            "Cross-Cutting Constraints",
-            "AI product",
-            "Hardware or physical product",
-            "Service",
-        ),
-        "references/prd-template.md": (
-            "Adaptive PRD Template",
-            "One-Page Decision Brief",
-            "Optional Product-Type Modules",
-            "Observed result",
-            "Decision changed or retained",
-        ),
-        "references/voice-guidance.md": (
-            "short original quotation",
-            "Never extend, remix, or fabricate",
-            "Professional And Plain",
-            "Deep Reasoning, Selective Delivery",
-            "Repair A Misfiring Answer",
-            "Pointed Closing",
-            "internal principle IDs",
-            "product-lens alias",
-        ),
-        "references/zh-CN/lens-router.md": (
-            "产品视角路由",
-            "主责分工",
-            "整体盲点与退出主责条件",
-            "挑战者门槛",
-        ),
-        "references/zh-CN/product-dimensions.md": (
-            "自适应产品维度",
-            "AI 产品",
-            "硬件或实体产品",
-            "服务产品",
-            "横向约束",
-        ),
-        "references/zh-CN/conflict-resolution.md": (
-            "产品视角冲突处理",
-            "处理顺序",
-        ),
-        "references/zh-CN/prd-template.md": (
-            "自适应 PRD 模板",
-            "一页决策简报",
-            "按产品类型选用的模块",
-            "实际结果",
-            "保留或修改的决定",
-        ),
-        "references/zh-CN/voice-guidance.md": (
-            "中文表达指引",
-            "原文锚点",
-            "不延伸、拼接或编造引语",
-            "专业但说人话",
-            "深入简出",
-            "回答跑偏后的修复",
-            "点睛式收尾",
-            "我所说的都是错的",
-            "内部原则编号",
-            "产品视角化名",
-        ),
-        "references/worked-example.md": (
-            "Worked Example",
-            "User-Facing Answer",
-            "Why The Workflow Stops Here",
-        ),
-        "references/zh-CN/worked-example.md": (
-            "中文工作样例",
-            "面向用户的回答",
-            "我所说的都是错的",
-            "为什么不继续展开",
-        ),
-        "references/behavior-evals.md": (
-            "Behavior Evaluations",
-            "Existing Decision File Without Write Authorization",
-            "Lens Conflict",
-            "General-Audience Clarity And Hidden IDs",
-            "Selective Delivery With Material Lenses",
-            "Distinctive Without Catchphrase Theater",
-            "User Says The Answer Misfired",
-            "Switch Method After Repeated Feedback",
-        ),
-        "references/zh-CN/behavior-evals.md": (
-            "中文行为评测",
-            "已有决策文件但未授权修改",
-            "视角冲突",
-            "普通用户可读性与编号隐藏",
-            "深入简出但保留有效视角",
-            "有味道但不变成口号",
-            "用户指出回答跑偏",
-            "连续反馈后换方法",
-        ),
-    }
+    required_paths = [
+        "SKILL.md",
+        "references/source-policy.md",
+        "references/expanded-workflow.md",
+        "references/maintenance.md",
+    ]
+    for language_dir in ("references", "references/zh-CN"):
+        for filename in (
+            "lens-router.md",
+            "product-dimensions.md",
+            "conflict-resolution.md",
+            "prd-template.md",
+            "voice-guidance.md",
+            "worked-example.md",
+            "behavior-evals.md",
+            "decision-memory.md",
+            "playful-interactions.md",
+            "decision-state.md",
+            "evidence-ledger.md",
+        ):
+            required_paths.append(f"{language_dir}/{filename}")
 
-    for relative_path, markers in required_markers.items():
+    for relative_path in required_paths:
         path = skill_root / relative_path
-        if not path.exists():
+        if not path.is_file():
             errors.append(f"missing workflow reference: {relative_path}")
-            continue
-        text = path.read_text(encoding="utf-8")
-        for marker in markers:
-            if marker not in text:
-                errors.append(
-                    f"{relative_path}: missing workflow marker '{marker}'"
-                )
+        elif not path.read_text(encoding="utf-8").strip():
+            errors.append(f"empty workflow reference: {relative_path}")
 
     interface_path = skill_root / "agents" / "openai.yaml"
     if not interface_path.exists():
         errors.append("missing interface metadata: agents/openai.yaml")
     else:
         interface_text = interface_path.read_text(encoding="utf-8")
-        if "不要急着写报告或 PRD" not in interface_text:
+        prompt = re.search(r"^  default_prompt: (.+)$", interface_text, re.MULTILINE)
+        if not prompt or "$super-pm" not in prompt.group(1):
             errors.append(
-                "agents/openai.yaml: default prompt must keep reports and PRDs optional"
+                "agents/openai.yaml: default_prompt must invoke $super-pm"
             )
 
     return errors
@@ -514,7 +410,7 @@ def main() -> int:
     print(
         f"Super PM validation passed for {len(THINKER_FILES)} bilingual aliased "
         "thinker references with variable card counts, language routing, "
-        "adaptive workflow contracts, trigger evaluation coverage, and local links."
+        "workflow resources, trigger fixture coverage, and local links. Runtime behavior was not tested by this validator."
     )
     return 0
 

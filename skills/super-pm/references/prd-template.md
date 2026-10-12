@@ -1,5 +1,7 @@
 # Adaptive PRD Template
 
+Explain material validation thresholds using baselines, error consequences, cost constraints, or an explicitly provisional working target. Distinguish small-sample findings from generalizable conclusions; example numbers are not business facts.
+
 Choose the smallest artifact that supports the next decision. Use the one-page brief for solo work, early alignment, or a compact decision handoff. Use the full PRD only when the user requests it or the product is ready for implementation or delivery handoff. A PRD is a carrier for product decisions, not proof that the product has been understood.
 
 ## One-Page Decision Brief

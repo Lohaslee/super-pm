@@ -58,13 +58,6 @@
       "rationale": "The request keeps legal interpretation with counsel but needs product-impact decisions now."
     },
     {
-      "id": "zh-vague-easter-egg",
-      "language": "zh-CN",
-      "prompt": "这个 Skill 还有没有什么特别的？",
-      "expected": "use",
-      "rationale": "用户在探索 Skill 的隐藏体验；应保持神秘，用轻量元彩蛋回应，不把它误判为产品发现任务。"
-    },
-    {
       "id": "zh-translation",
       "language": "zh-CN",
       "prompt": "把这段英文翻译成简体中文，保留原来的段落格式。",
@@ -105,6 +98,34 @@
       "prompt": "Summarize this article in five bullet points without adding commentary.",
       "expected": "do_not_use",
       "rationale": "A bounded summarization request contains no product decision."
+    },
+    {
+      "id": "zh-explore-mechanisms",
+      "language": "zh-CN",
+      "prompt": "这个帮助人开始任务的产品还有什么不同做法？先给几种机制，别急着替我拍板。",
+      "expected": "use",
+      "rationale": "用户请求探索产品机制，应保留真正不同的方向和代价。"
+    },
+    {
+      "id": "en-explore-mechanisms",
+      "language": "en",
+      "prompt": "Explore different ways a service could help people start tasks. Do not pick a winner yet.",
+      "expected": "use",
+      "rationale": "The request needs product exploration rather than an immediate decision."
+    },
+    {
+      "id": "zh-fictional-easter-egg",
+      "language": "zh-CN",
+      "prompt": "写一个关于寻找彩蛋的童话故事，三百字。",
+      "expected": "do_not_use",
+      "rationale": "彩蛋关键词本身不构成产品任务。"
+    },
+    {
+      "id": "en-fictional-easter-egg",
+      "language": "en",
+      "prompt": "Write a short fictional story about a hidden Easter egg.",
+      "expected": "do_not_use",
+      "rationale": "Fiction writing is not a product decision or contextual skill discovery."
     }
   ]
 }

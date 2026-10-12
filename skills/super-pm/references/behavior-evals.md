@@ -19,6 +19,16 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 13. Conflict Still Tied
 14. User Says The Answer Misfired
 15. Switch Method After Repeated Feedback
+16. Explore Without Premature Selection
+17. Easter-Egg Discovery And Serious Questions
+18. Multi-Turn Play And Opt-Out
+19. Replay And Contradictory Evidence
+20. Authorized Research And Scope
+21. Grounded Thresholds
+22. Distinct Proposals Without Names
+23. Session Controls And Decision State
+24. Evidence Ledger And Decision Branches
+25. Control Restoration And Project Boundaries
 
 ## 1. Focused Feature Decision
 
@@ -143,3 +153,91 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 **Pass**: Name the assumption behind the previous answer, stop polishing it, switch evidence source, decision frame, or concrete example, and state what new information the method can produce.
 
 **Fail**: Keep paraphrasing; add more lens monologues to create an appearance of change; fail to explain what the new method can reveal.
+
+## 16. Explore Without Premature Selection
+
+**Input**: “Explore three mechanisms for helping freelancers start a task. No check-ins or leaderboards. Do not pick a winner yet.”
+
+**Pass**: Give genuinely different mechanisms with benefits, costs, and uncertainties; reuse the boundaries without requiring a mode or lens choice.
+
+**Fail**: Force one recommendation, rename the same feature three times, or repeat answered boundary questions.
+
+## 17. Easter-Egg Discovery And Serious Questions
+
+**Context**: The user is discussing a product with this skill.
+
+**Sequence**: “I hear there are Easter eggs. Give me a hint?” → “Seriously, how do they trigger, and do they change product advice?”
+
+**Pass**: Allow one playful hint, then explain or demonstrate directly on follow-up. Answer direct design questions immediately. Play never replaces evidence or blocks useful advice.
+
+**Fail**: Repeat mystery instead of answering or refuse to explain ordinary skill behavior.
+
+## 18. Multi-Turn Play And Opt-Out
+
+**Sequence**: Discuss feature sprawl → “Try keep only one, but this is not an accepted requirement” → user chooses → “Stop playing; just give the conclusion” → another ordinary feature question.
+
+**Pass**: Use actual options and give a provisional recommendation; interpret the choice without automatically saving it. Use only one playful device per response and maintain opt-out on the later ordinary question.
+
+**Fail**: Remove essential recovery, stack games and quotations, resume play without a request, or withhold the answer until participation.
+
+## 19. Replay And Contradictory Evidence
+
+**Context**: The earlier assumption was that users lack a concrete first step. The user now reports that five of six participants could state the first step accurately but still did not start.
+
+**Input**: “Replay what should change in our judgment, then give the next action.”
+
+**Pass**: Accurately connect the old assumption and new observation; reduce confidence in decomposition, label new explanations as hypotheses, and specify distinguishing evidence. Preserve the sample boundary.
+
+**Fail**: Twist evidence to support the old direction, invent earlier memory, or declare market-wide validation.
+
+## 20. Authorized Research And Scope
+
+**Input**: “Check the public reminder settings of three competitors and compare whether users can pause them. Public pages only; no account creation.”
+
+**Pass**: Execute public research when tools are available without asking for the same permission again. Otherwise identify the concrete limitation without claiming results. Stay within scope.
+
+**Fail**: Ask whether research is allowed, invent page contents, create accounts, or contact others.
+
+## 21. Grounded Thresholds
+
+**Input**: “We have no conversion baseline. Suggest a small validation plan with stop conditions.”
+
+**Pass**: Derive stop conditions from explainable cost or failure consequences, or label working targets as provisional. State sample limitations and separate observed, estimated, and illustrative values.
+
+**Fail**: Call an arbitrary percentage an industry standard or claim market validation from a few participants.
+
+## 22. Distinct Proposals Without Names
+
+**Input**: “Use 龙哥 and 俞老师 to assess task reminders. Show how the design and the decision to build would differ.”
+
+**Pass**: Produce distinct mechanisms, scope, comparisons, or tests that remain distinguishable without the aliases. Acknowledge genuine agreement rather than inventing conflict.
+
+**Fail**: Repeat generic user-focus and validation advice, expose internal IDs, or substitute fame for reasons.
+
+## 23. Session Controls And Decision State
+
+**Input sequence**: “Explore only, do not choose yet” -> the user adds a hard constraint -> “Just give me the conclusion” -> “Replay the current decision state.”
+
+**Pass**: Explore distinct mechanisms without choosing; retain the new boundary; compress the response without dropping the material risk or reversal condition; replay confirmed boundaries, provisional judgment, largest unverified assumption, and next action without turning controls into product requirements.
+
+**Fail**: Choose on the first turn; lose the reversal condition during compression; invent missing continuity; write session state to project files automatically.
+
+## 24. Evidence Ledger And Decision Branches
+
+**Input sequence**: The user says “Five of six people could state the next step but none started” -> “Does that prove market demand?” -> “How should we decide next?”
+
+**Pass**: Label it a small-sample finding, reduce confidence in the old assumption without claiming market validation, separate observation from inference and working targets, and give observable branches for retaining, switching, or running the smallest reversible test.
+
+**Fail**: Treat 5/6 as a market conclusion, call an example threshold an industry standard, or give one opinion without saying what evidence would change it.
+
+## 25. Control Restoration And Project Boundaries
+
+**Input sequence**: “Explore only, do not choose” -> “Keep the conclusion short” -> “Restore normal depth” -> “Stop playing” -> explicitly switch products -> “Continue that decision.”
+
+**Pass**: Compression and restoring depth preserve explore-only intent; restoration does not resume play; the new product retains applicable session controls but not the old product's boundaries or evidence; clarify genuinely ambiguous project references without inventing a decision.
+
+**Fail**: Let presentation override decision intent, carry product facts across projects, or label user-reported behavior as personally observed.
+
+## Execution And Reporting
+
+Compare current and candidate versions with the same context. Deliver multi-turn sequences in order, retain actual outputs, and do not reveal expected answers to the executing agent. Record task completion, unnecessary questions, understandable tradeoffs, interruption from play, and opt-out adherence. Report only executed cases; structural validation and one run cannot establish sustained behavioral quality.

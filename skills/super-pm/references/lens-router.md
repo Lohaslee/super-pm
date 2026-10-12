@@ -86,7 +86,7 @@ Keep this record internally or show it only when the disagreement helps the user
 
 ```text
 Decision question:
-Primary Owner and principle IDs:
+Primary Owner and concrete judgment:
 Direct recommendation:
 Challenger and named test:
 Material alternative or refusal:
