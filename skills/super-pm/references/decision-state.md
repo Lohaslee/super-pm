@@ -6,15 +6,17 @@ Use this as an internal operating contract for multi-turn work. It is not a form
 
 Recognize these controls when the user says them or an equivalent:
 
-- `只给结论` / `直接说结论`: concise recommendation, material risk, and a next action only when useful.
-- `只做探索，不拍板`: provide distinct mechanisms and tradeoffs; do not select a winner.
-- `深挖这个分歧`: focus on the disagreement and the evidence that could settle it.
-- `只看用户价值` / `只看交付`: temporarily prioritize that dimension while retaining hard constraints.
-- `回放决定` / `接着刚才的判断`: summarize the current decision state and any changes since the earlier judgment.
-- `恢复正常`: restore default depth and output shape; retain explore/decide intent and any play opt-out.
-- `别玩了`: disable proactive easter eggs for the rest of the conversation until the user explicitly resumes them.
+- `Keep it brief` / `Just the conclusion` (`简短一点` / `只给结论`): concise recommendation, material risk, and a next action only when useful.
+- `Explore only, don't decide yet` (`只做探索，不拍板`): distinct mechanisms and tradeoffs; do not select a winner.
+- `Go deeper on this disagreement` (`深挖这个分歧`): focus on the disagreement and evidence that could settle it.
+- `Focus on user value` / `Focus on delivery` (`只看用户价值` / `只看交付`): prioritize that dimension while retaining hard constraints.
+- `Replay our decision` / `Continue that decision` (`回放决定` / `接着刚才的判断`): summarize current state and changes since the earlier judgment.
+- `Back to normal` (`恢复正常`): restore default depth and output shape; retain explore/decide intent and any play opt-out.
+- `Stop playing` (`别玩了`): disable proactive play until the user explicitly resumes it.
 
 Track explore/decide intent, depth, output shape, and play separately. A request for a concise conclusion does not override explore-only intent: summarize options and unknowns without choosing. Apply explicitly one-turn controls only to that turn; otherwise retain controls until changed. A one-off play request permits that interaction only.
+
+`Keep it brief` affects depth alone; `Just the conclusion` also opts out of proactive play, as does `Stop playing`. `Back to normal` does not reopen play. If the user explicitly asks for a recommendation after exploration, update decision intent rather than treating the earlier explore-only instruction as permanent.
 
 Do not treat a control as a confirmed product decision. A request to compress output changes presentation, not the accepted scope or evidence status.
 

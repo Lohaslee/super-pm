@@ -272,6 +272,7 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
         "references/source-policy.md",
         "references/expanded-workflow.md",
         "references/maintenance.md",
+        "scripts/check_installation.py",
     ]
     for language_dir in ("references", "references/zh-CN"):
         for filename in (
@@ -307,6 +308,34 @@ def validate_workflow_contract(skill_root: Path) -> list[str]:
                 "agents/openai.yaml: default_prompt must invoke $super-pm"
             )
 
+    return errors
+
+
+def read_release_metadata(skill_root: Path) -> dict[str, str]:
+    """Read the package's flat string metadata; generic YAML checks run separately."""
+    path = skill_root / "SKILL.md"
+    if not path.is_file():
+        return {}
+    parts = path.read_text(encoding="utf-8").split("---", 2)
+    if len(parts) < 3:
+        return {}
+    block = re.search(r"(?m)^metadata:\n((?:[ \t]+[^\n]*\n)*)", parts[1])
+    if not block:
+        return {}
+    return {
+        key: value.strip().strip("\"'")
+        for key, value in re.findall(r"(?m)^  ([a-z_]+):[ \t]*(.+)$", block[1])
+    }
+
+
+def validate_release_metadata(skill_root: Path) -> list[str]:
+    metadata = read_release_metadata(skill_root)
+    errors: list[str] = []
+    number = r"(?:0|[1-9]\d*)"
+    if not re.fullmatch(rf"{number}\.{number}\.{number}", metadata.get("version", "")):
+        errors.append("SKILL.md: metadata.version must be a stable X.Y.Z version")
+    if not re.fullmatch(r"https://github\.com/[^/\s]+/[^/\s]+", metadata.get("source", "")):
+        errors.append("SKILL.md: metadata.source must identify the GitHub source repository")
     return errors
 
 
@@ -399,6 +428,7 @@ def main() -> int:
     errors.extend(validate_local_links(skill_root))
     errors.extend(validate_alias_exposure(skill_root))
     errors.extend(validate_workflow_contract(skill_root))
+    errors.extend(validate_release_metadata(skill_root))
     errors.extend(validate_trigger_cases(skill_root))
 
     if errors:

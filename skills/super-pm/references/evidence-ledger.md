@@ -1,12 +1,16 @@
 # Evidence Ledger And Decision Branches
 
-Use this ledger when a recommendation depends on evidence, especially when a small sample or estimated threshold could be mistaken for proof.
+Choose the lightest evidence treatment that changes the decision:
+
+- **Brief source check**: when a recommendation materially relies on a small sample, user-reported behavior, an unverified factual claim, or a numeric decision threshold, state source, scope or sample limits, and uncertainty in ordinary prose. A number alone does not require a record; a deadline is not automatically a validation threshold.
+- **Validation record**: when designing or conducting validation, reconciling conflicting evidence, or reversing a direction, use the relevant record fields below. Show only what helps the user act; a full table is optional and file persistence still requires authorization.
+- **Ordinary decision**: when accepted boundaries and a low-loss tradeoff suffice, answer directly. Check the evidence underlying a boundary if it is disputed; “scope decision” is not an exemption from material evidence.
 
 ## Source labels
 
 Distinguish source from sample scope: user-reported behavior remains user-reported; a small sample is a scope limit, not proof of direct observation. Label material inputs when this distinction affects the decision; do not force a ledger table into every answer. Use the user's working language.
 
-Label each material input as one of:
+Keep source and interpretation distinguishable using these labels as needed; source and sample scope may apply together:
 
 - `User statement`: what the user explicitly reported or decided.
 - `Observed behavior`: what was directly observed in a product, interview, test, or public source.

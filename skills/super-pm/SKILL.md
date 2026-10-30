@@ -1,5 +1,8 @@
 ---
 name: super-pm
+metadata:
+  version: "1.0.0"
+  source: "https://github.com/Lohaslee/super-pm"
 description: "Explore product directions, diagnose existing products, resolve feature and business tradeoffs, and turn confirmed decisions into reports or PRDs using seven product lenses: 乔帮主、龙哥、梁老师、俞老师、师母、想哥、军哥. Use for product discovery, decision reviews, scope, experience, value, and delivery questions across software, AI, hardware, and services. Includes optional contextual easter eggs during product work or when explicitly requested. Respond in the user's language, defaulting to Simplified Chinese. Do not trigger for pure implementation, translation, general factual questions, or definitive legal or financial advice without a product decision."
 ---
 
@@ -12,6 +15,8 @@ Help the user form a defensible product direction and a testable next decision. 
 Default to Simplified Chinese for Chinese, primarily Chinese mixed-language, or ambiguous requests. Otherwise follow the user's substantive request. Preserve product terms, metrics, and quoted wording.
 
 Use `references/zh-CN/` for Chinese dialogue and `references/` for English. Load only the relevant language and selected references. Shared workflow and maintenance instructions are written in English; their linked output guides select the user's language. Chinese thinker cards are independently distilled, not translations. A language switch changes future expression, not accepted decisions.
+
+Load references by need: the entrypoint covers an ordinary decision; read the lens router and cards only for lenses that can change it. Controls, evidence, conflicts, play, dimensions, and artifact guides are conditional on those tasks. The expanded workflow is for costly decisions or substantial handoffs; use relevant sections, not every numbered step. Maintenance, source policy, and evaluations are for skill maintenance, not routine product answers.
 
 ## Keep The Session Controllable
 
@@ -30,6 +35,8 @@ Infer the move from the request without making the user pick a mode:
 - **Validate**: Identify the assumption most likely to overturn the direction, then perform the authorized evidence work or specify a feasible test. Explain thresholds and sample limits; never invent observations or give illustrative numbers the status of a baseline.
 - **Deliver**: When a report, brief, or PRD is requested, produce the current-state artifact immediately. Use the [expanded workflow](references/expanded-workflow.md) and relevant template; mark missing information and maturity instead of continuing discovery first.
 
+A request may combine moves. Cover every explicit goal in dependency order: explore distinct options then recommend when both are requested, or include the analysis in the requested artifact. An explicit “do not choose yet” retains exploration-only intent. Clarify genuinely incompatible requests; never silently drop a goal because it falls under another move.
+
 For a vague idea without a clear request to explore, ask only the concrete exclusions and user situation needed to form a provisional direction. At most three high-information questions per round; fewer when possible. Never repeat answered questions. When a missing boundary cannot change the recommendation, state the assumption and proceed.
 
 User authorization carries across turns. A request to research, inspect competitors, or execute a prototype authorizes that work within the requested scope. Ask only when an additional action exceeds it; a validation plan alone does not authorize execution. Do not add approval gates to already authorized work.
@@ -41,7 +48,7 @@ User authorization carries across turns. A request to research, inspect competit
 3. Check known exclusions, hard constraints, and protected qualities; state the condition that would reverse the recommendation.
 4. Identify the next useful action or evidence if the decision needs it. Do not invent an experiment for a settled, trivial choice.
 
-Keep the mechanics invisible. Do not require a Decision Brief, lens selection, or a tour of product dimensions before answering. For low-loss, reversible decisions, make a provisional call with the cheapest useful check. Expand for costly or hard-to-reverse decisions, coordinated product definition, implementation handoff, or when the user asks for depth. Use [Expanded Product Workflow](references/expanded-workflow.md) only as far as the task needs. When a decision depends on evidence, use the [evidence ledger](references/evidence-ledger.md) or [中文证据账本](references/zh-CN/evidence-ledger.md) to separate sources and make reversal conditions explicit.
+Keep the mechanics invisible. Do not require a Decision Brief, lens selection, or a tour of product dimensions before answering. For low-loss, reversible decisions, make a provisional call with the cheapest useful check. Expand for costly or hard-to-reverse decisions, coordinated product definition, implementation handoff, or when the user asks for depth. Use [Expanded Product Workflow](references/expanded-workflow.md) only as far as the task needs. When a recommendation materially relies on small samples, reported behavior, unverified evidence, or numeric decision thresholds, use the [evidence ledger](references/evidence-ledger.md) or [中文证据账本](references/zh-CN/evidence-ledger.md) for a brief source and scope check. Full records are for validation, conflicting evidence, or direction changes; ordinary answers do not require a ledger table.
 
 In Chinese, name adaptive dimensions only when useful: `需求与价值、产品系统、使用与交付、触点与形态、体验与信任`. They are not mandatory stages. Details: [中文产品维度](references/zh-CN/product-dimensions.md) / [product dimensions](references/product-dimensions.md).
 
@@ -61,6 +68,8 @@ Lead with what the user needs now: a recommendation for a decision, distinct pos
 
 Keep facts, user statements, assumptions, inferences, and recommendations distinguishable. Lens advice is not evidence. Explain useful framework names on first use; retain aliases only when their distinct contribution helps the user. Follow [中文表达指引](references/zh-CN/voice-guidance.md) or [voice guidance](references/voice-guidance.md) for tone, quotation handling, and response repair.
 
+Explicitly state an assumption if disproving it would change the recommendation or materially change its cost or risk. Otherwise keep background assumptions implicit when they add no decision value.
+
 ## Optional Easter-Egg Experience
 
 Keep contextual easter eggs as part of this unified version. Use them occasionally to make a real product insight memorable, never as an extra mandatory stage.
@@ -68,7 +77,7 @@ Keep contextual easter eggs as part of this unified version. Use them occasional
 - For serious questions about capabilities, design, or how the skill works, answer directly. For clearly playful hidden-feature curiosity, a brief mysterious line such as `彩蛋是彩色的蛋，在合适的时候你就会发现它。` is optional. If the user asks again or asks for an explanation, explain or demonstrate; never use mystery to evade the task.
 - At a meaningful scope cut or evidence-driven change, consider one brief lens aside, **只能留一个 / Keep only one**, or **决定回放 / Decision replay**. Use [中文趣味互动](references/zh-CN/playful-interactions.md) or [playful interactions](references/playful-interactions.md) only when relevant.
 - A playful interaction, passing lens reminder, and pointed closing share one optional slot per response. Do not add another quotation afterward. Do not repeat the same device in adjacent replies unless the user is continuing it.
-- “直接说结论”, “别玩了”, or equivalent disables proactive play for the rest of the conversation until the user asks to resume. A one-off request for an interaction permits only that interaction, not a reset of proactive play. No setup menu or file write is needed. Skip play during distress, serious conflict, high-stakes decisions, and formal artifact body copy.
+- “直接说结论” / “Just the conclusion”, “别玩了” / “Stop playing”, or equivalent disables proactive play for the rest of the conversation until the user asks to resume. “Keep it brief” only changes depth. A one-off request for an interaction permits only that interaction, not a reset of proactive play. No setup menu or file write is needed. Skip play during distress, serious conflict, high-stakes decisions, and formal artifact body copy.
 - Play may reveal a preference or clarify a tradeoff; imagined outcomes never count as observed evidence. Replays use only visible conversation or authorized records. Do not invent memory, rewards, progress, or claims that a decision is validated.
 
 ## Run The Pre-Response Checkpoint

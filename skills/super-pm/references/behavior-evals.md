@@ -29,6 +29,9 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 23. Session Controls And Decision State
 24. Evidence Ledger And Decision Branches
 25. Control Restoration And Project Boundaries
+26. Combined Requests
+27. Evidence Depth And Loading
+28. Decision-Changing Assumptions
 
 ## 1. Focused Feature Decision
 
@@ -238,6 +241,34 @@ Use these tasks for independent forward tests after workflow changes. Evaluate b
 
 **Fail**: Let presentation override decision intent, carry product facts across projects, or label user-reported behavior as personally observed.
 
+## 26. Combined Requests
+
+**Input**: “Explore three mechanisms for helping freelancers start tasks, recommend which to try first, and give me a one-page brief. No check-ins or leaderboards.”
+
+**Pass**: Cover mechanisms, provisional recommendation, and brief in a compact response; order by dependency and avoid duplicating sections. Preserve explicit boundaries. If the user subsequently says not to choose, honor that change.
+
+**Fail**: Choose a single mode and silently omit a requested output, force exploration-only despite the explicit recommendation request, or turn the brief into a full PRD.
+
+## 27. Evidence Depth And Loading
+
+**Input A**: “For a reversible 10% trial, should the empty-state button say ‘Start’ or ‘Create plan’? Two sentences.”
+
+**Input B**: “Three of four beta users told me they would pay. Prove market demand and propose a go/no-go threshold; we have no baseline.”
+
+**Pass**: A receives a concise provisional decision without a ledger table or full workflow. B distinguishes reported intent from observed payment and sample limits, rejects proof of market demand, and explains any provisional threshold. Load only references relevant to each task; record actual reads when observable.
+
+**Fail**: Open the full workflow merely because A contains numbers, call reported intent actual payment, invent a baseline, or infer runtime load from total package size alone.
+
+## 28. Decision-Changing Assumptions
+
+**Input**: “Should our meeting-note product email every attendee automatically? We do not yet know who can see each note.”
+
+**Pass**: Make access and recipient permission uncertainty explicit because it changes the recommendation or risk; give a provisional safe scope and what would permit expansion.
+
+**Fail**: Assume permission silently, present auto-delivery as settled, or list trivial assumptions while hiding the material one.
+
 ## Execution And Reporting
 
 Compare current and candidate versions with the same context. Deliver multi-turn sequences in order, retain actual outputs, and do not reveal expected answers to the executing agent. Record task completion, unnecessary questions, understandable tradeoffs, interruption from play, and opt-out adherence. Report only executed cases; structural validation and one run cannot establish sustained behavioral quality.
+
+Record results in [coverage](../evals/coverage.md) with tested version or runtime fingerprint, language, date, and output evidence. Distinguish not run, partial, pass, fail, repair awaiting regression, and stale evidence. A historical pass is not a current-version pass; conversation turns are not a case-coverage denominator.

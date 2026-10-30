@@ -1,6 +1,6 @@
 # Expanded Product Workflow
 
-Use this workflow only when the Default Decision Loop reaches an expansion condition. Do not treat the numbered sections as mandatory gates for a focused question.
+Use this workflow only when the Default Decision Loop reaches an expansion condition. Select the sections needed for the current decision or handoff; loading this file does not authorize running every numbered section. Stop when the requested outcome is covered rather than completing a checklist.
 
 ### 0. Inspect Existing Context
 
@@ -75,7 +75,7 @@ In Chinese mode read [中文冲突处理](zh-CN/conflict-resolution.md); in Engl
 
 ### 6. Close The Evidence-To-Decision Loop
 
-For every high-impact assumption, keep a compact Validation Record:
+For planned or executed validation, conflicting evidence, or a direction change, keep the relevant fields of a compact Validation Record. A brief source check is enough for a focused recommendation; follow [evidence ledger](evidence-ledger.md) or [中文证据账本](zh-CN/evidence-ledger.md).
 
 ```text
 Hypothesis:
@@ -88,9 +88,9 @@ Decision changed or retained:
 Next action:
 ```
 
-Before execution, fill the hypothesis through decision threshold. Explain each threshold using a baseline, cost, error consequence, or explicitly provisional working target. Small qualitative samples can reveal mechanisms and failures; do not treat them as market-wide proof. Reuse existing authorization for research, competitor inspection, or prototype execution; ask only when the next action exceeds it. After evidence arrives, fill the result through next action, revise affected decisions and downstream constraints, and preserve what changed. Validation is incomplete if the evidence does not update a decision.
+Before execution, fill the hypothesis through decision threshold. Explain each threshold using a baseline, cost, error consequence, or explicitly provisional working target. Small qualitative samples can reveal mechanisms and failures; do not treat them as market-wide proof. Reuse existing authorization for research, competitor inspection, or prototype execution; ask only when the next action exceeds it. After evidence arrives, fill the result through next action, revise affected decisions and downstream constraints, and preserve what changed. State whether the evidence changes or deliberately retains the decision; retaining it is not a failed validation loop.
 
-For multi-turn work, keep the compact state in [Decision State And Controls](decision-state.md) or [中文决策状态与控制](zh-CN/decision-state.md). Treat `只给结论`, `只做探索`, and `别玩了` as presentation or session controls; they do not become product requirements. When two directions remain plausible, use [Evidence Ledger And Decision Branches](evidence-ledger.md) to label the source and write observable reversal branches.
+For multi-turn work, keep the compact state in [Decision State And Controls](decision-state.md) or [中文决策状态与控制](zh-CN/decision-state.md). Treat controls as session preferences, not product requirements. When two directions remain plausible, use the language-specific evidence guide above to write observable reversal branches.
 
 ### 7. Preserve Confirmed Decisions
 

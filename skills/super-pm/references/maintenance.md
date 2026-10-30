@@ -23,3 +23,11 @@ The repository's `skills/super-pm/` directory is the maintained source, includin
 After validation, compare the full directory with each intended installation, inspect destination-only content before syncing, and preserve unrelated files. Copy the same release to the intended installations; exclude `.DS_Store` and `__pycache__`. Verify content equality afterward and run the validators from the installed paths. Follow the user's authorization for installation, commits, and publishing; never infer Git push permission from a request to improve the skill.
 
 Structural checks do not establish runtime routing or conversation quality. For behavior evaluation, report the tested inputs, actual outputs, pass/fail judgments, and limitations separately. Do not claim unrun cases passed.
+
+## Version And Installation Checks
+
+Use `metadata.version` for the stable X.Y.Z release version and `metadata.source` for the source repository. This project starts explicit numbering at 1.0.0; do not invent version numbers for historical commits. Repository release notes live in the root CHANGELOG.md and are not routine runtime instructions.
+
+Run `python3 skills/super-pm/scripts/check_installation.py` from the source checkout to compare versions and full content fingerprints with both standard installations. Use `--compare /path/to/installation` for another location. Add `--upstream` to explicitly query GitHub main. It is read-only, performs no automatic update, reports dirty local changes separately, and reports unavailable network evidence as unknown. Equal version labels alone do not establish content equality. Exit codes: 0 matches, 1 installation or commit difference, 2 unavailable upstream evidence.
+
+Review [coverage and known failures](../evals/coverage.md) before declaring behavior verified. Record only executed tests, bind results to the tested runtime fingerprint, and keep untested or repaired-but-unrerun behavior visible. Preserve historical reports rather than changing them into current passes.
